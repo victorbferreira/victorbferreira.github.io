@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Barcelos Ferreira — Economista e consultor em políticas públicas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: oklch(97% 0.005 250);
+    --surface: oklch(98% 0.005 250);
+    --text: oklch(18% 0.02 250);
+    --text-soft: oklch(35% 0.02 250);
+    --muted: oklch(50% 0.02 250);
+    --border: oklch(88% 0.008 250);
+    --border-soft: oklch(92% 0.006 250);
+    --moss: oklch(32% 0.04 165);
+    --moss-deep: oklch(26% 0.04 165);
+    --moss-soft: oklch(94% 0.012 165);
+    --moss-line: oklch(85% 0.02 165);
+    --accent: oklch(60% 0.12 60);
+    --accent-soft: oklch(94% 0.04 60);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--moss); color: oklch(95% 0.01 165); }
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: oklch(97% 0.005 250 / 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 14px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px; letter-spacing: 0.04em;
+  }
+  .nav-logo { font-weight: 500; color: var(--text); }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a {
+    color: var(--text-soft);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color .15s, border-color .15s;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--moss);
+    border-bottom-color: var(--moss);
+  }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .nav-inner { padding: 14px 20px; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--moss);
+    color: oklch(95% 0.01 165);
+    padding: 96px 32px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero-inner { max-width: 1280px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: oklch(75% 0.04 165);
+    margin-bottom: 32px;
+  }
+  .hero-name {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: clamp(56px, 9.5vw, 144px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 0.92;
+    margin: 0;
+    color: oklch(95% 0.01 165);
+  }
+  .hero-name .dot { color: var(--accent); font-weight: 300; }
+  .hero-tagline {
+    margin-top: 36px; margin-bottom: 0;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: oklch(85% 0.02 165);
+    max-width: 640px;
+    line-height: 1.45;
+  }
+  .hero-stats {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid oklch(45% 0.04 165);
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 24px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: oklch(75% 0.03 165);
+    letter-spacing: 0.04em;
+  }
+  .hero-stats a { color: oklch(85% 0.02 165); }
+  @media (max-width: 640px) {
+    .hero { padding: 72px 20px 56px; }
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    padding: 96px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-of-type { border-bottom: none; }
+  .section-inner { max-width: 1280px; margin: 0 auto; }
+  @media (max-width: 640px) {
+    .section { padding: 64px 20px; }
+  }
+
+  /* ── SECTION HEAD ── */
+  .section-head {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+    align-items: baseline;
+  }
+  .section-num {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 56px; font-weight: 300;
+    letter-spacing: -0.04em;
+    color: oklch(70% 0.04 165);
+    line-height: 0.9;
+  }
+  .section-label {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: oklch(40% 0.04 165);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: clamp(26px, 3.2vw, 40px);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--text);
+    max-width: 720px;
+  }
+  @media (max-width: 640px) {
+    .section-head { grid-template-columns: 1fr; gap: 12px; }
+    .section-num { font-size: 40px; }
+  }
+
+  /* ── SOBRE ── */
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .sobre-bio {
+    font-size: 16px; line-height: 1.75;
+    color: var(--text-soft);
+  }
+  .sobre-bio p { margin: 0 0 1rem; }
+  .sobre-bio p:last-child { margin-bottom: 0; }
+  .formacao-list { margin-top: 32px; }
+  .formacao-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-soft);
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .formacao-item:first-child { border-top: 1px solid var(--border-soft); }
+  .formacao-titulo { font-weight: 500; font-size: 14px; color: var(--text); }
+  .formacao-org { font-size: 13px; color: var(--moss); }
+  .formacao-date {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+  }
+  .sobre-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .stat-box {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 20px;
+  }
+  .stat-n {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 40px; font-weight: 300;
+    letter-spacing: -0.04em;
+    color: var(--moss); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-l {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .sobre-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.06em;
+    padding: 5px 10px;
+    border: 1px solid var(--moss-line);
+    background: var(--moss-soft);
+    color: var(--moss);
+  }
+  @media (max-width: 900px) {
+    .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* ── MAPA ── */
+  .mapa-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 32px; align-items: stretch;
+  }
+  .mapa-svg-wrap {
+    background: var(--moss-soft);
+    border: 1px solid var(--moss-line);
+    aspect-ratio: 4 / 3;
+    position: relative; overflow: hidden;
+  }
+  .mapa-svg-wrap svg { display: block; }
+  .mapa-label {
+    position: absolute; bottom: 14px; left: 16px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: oklch(45% 0.04 165);
+    pointer-events: none;
+  }
+  .mapa-panel {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    display: flex; flex-direction: column;
+  }
+  .mapa-panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex; justify-content: space-between;
+  }
+  .mapa-panel-list { overflow-y: auto; max-height: 480px; }
+  .mapa-item {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-soft);
+    cursor: pointer;
+    background: transparent;
+    border-left: 3px solid transparent;
+    transition: background .12s, border-color .12s;
+  }
+  .mapa-item:hover, .mapa-item.active {
+    background: var(--moss-soft);
+    border-left-color: var(--accent);
+  }
+  .mapa-item-nome {
+    font-size: 13px; font-weight: 500; color: var(--text);
+    margin-bottom: 2px;
+  }
+  .mapa-item-proj {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; color: var(--muted); letter-spacing: 0.04em;
+  }
+  .mapa-item-count {
+    display: inline-block;
+    background: var(--moss);
+    color: oklch(92% 0.01 165);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9px; padding: 2px 6px;
+    margin-left: 6px; vertical-align: middle;
+  }
+  @media (max-width: 900px) {
+    .mapa-grid { grid-template-columns: 1fr; }
+    .mapa-panel-list { max-height: 280px; }
+  }
+
+  /* ── TRAJETÓRIA ── */
+  .traj-list { display: flex; flex-direction: column; }
+  .traj-item {
+    display: grid;
+    grid-template-columns: minmax(120px, 160px) 1fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .traj-item:first-child { border-top: 1px solid var(--border-soft); }
+  .traj-date {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+    letter-spacing: 0.08em;
+    padding-top: 3px;
+  }
+  .traj-short {
+    display: inline-block;
+    background: var(--moss);
+    color: oklch(92% 0.01 165);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9px; padding: 3px 7px;
+    margin-bottom: 8px; letter-spacing: 0.08em;
+  }
+  .traj-cargo {
+    font-weight: 500; font-size: 15px; color: var(--text);
+    margin-bottom: 2px;
+  }
+  .traj-org { font-size: 13px; color: var(--moss); margin-bottom: 10px; }
+  .traj-desc { font-size: 14px; color: var(--text-soft); margin-bottom: 12px; line-height: 1.65; }
+  .traj-projetos {
+    display: flex; flex-direction: column; gap: 4px;
+    margin-top: 8px;
+  }
+  .traj-proj {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+    padding-left: 12px; position: relative;
+  }
+  .traj-proj::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--accent);
+  }
+  @media (max-width: 640px) {
+    .traj-item { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  /* ── PROJETOS ── */
+  .filter-bar {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .filter-chip {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.06em;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all .12s;
+  }
+  .filter-chip:hover, .filter-chip.active {
+    border-color: var(--moss);
+    color: var(--moss);
+    background: var(--moss-soft);
+  }
+  .proj-counter {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+  }
+  .proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .proj-card {
+    background: var(--surface);
+    padding: 24px;
+    cursor: pointer;
+    transition: background .12s;
+    position: relative;
+  }
+  .proj-card:hover { background: var(--moss-soft); }
+  .proj-card-star {
+    position: absolute; top: 20px; right: 20px;
+    color: var(--accent); font-size: 12px;
+  }
+  .proj-card-ano {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; color: var(--muted);
+    letter-spacing: 0.1em; margin-bottom: 10px;
+  }
+  .proj-card-titulo {
+    font-weight: 500; font-size: 14px; color: var(--text);
+    line-height: 1.4; margin-bottom: 8px;
+  }
+  .proj-card-cliente {
+    font-size: 12px; color: var(--muted); margin-bottom: 4px;
+  }
+  .proj-card-tipo {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--moss); letter-spacing: 0.04em;
+  }
+  .proj-card-resumo {
+    font-size: 13px; color: var(--text-soft);
+    margin-top: 10px; line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 1000;
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    max-width: 600px; width: 100%;
+    max-height: 88vh; overflow-y: auto;
+    padding: 32px;
+  }
+  .modal-close {
+    float: right; background: none; border: none;
+    font-size: 20px; cursor: pointer;
+    color: var(--muted); margin: -4px -4px 0 0;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .modal-tipo {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--moss);
+    margin-bottom: 8px;
+  }
+  .modal-titulo {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-weight: 500; font-size: 22px;
+    letter-spacing: -0.02em; margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  .modal-cliente { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .modal-resumo {
+    font-size: 14px; color: var(--text-soft);
+    line-height: 1.7; padding: 16px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ── PUBLICAÇÕES ── */
+  .pub-list { display: flex; flex-direction: column; }
+  .pub-item {
+    display: grid;
+    grid-template-columns: minmax(120px, 160px) 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pub-item:first-child { border-top: 1px solid var(--border-soft); }
+  .pub-ano {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+    padding-top: 3px;
+  }
+  .pub-tipo {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; color: var(--moss);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-block;
+    background: var(--moss-soft);
+    padding: 3px 8px; margin-bottom: 8px;
+  }
+  .pub-titulo { font-weight: 500; font-size: 14px; color: var(--text); margin-bottom: 4px; }
+  .pub-veiculo { font-size: 13px; color: var(--muted); }
+  @media (max-width: 640px) {
+    .pub-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* ── DOCÊNCIA ── */
+  .doc-manifesto {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: var(--text-soft);
+    line-height: 1.5;
+    max-width: 800px;
+    margin-bottom: 56px;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+  }
+  .doc-numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .doc-num-item {
+    background: var(--surface);
+    padding: 24px 20px;
+  }
+  .doc-num-n {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 40px; font-weight: 300;
+    letter-spacing: -0.04em;
+    color: var(--moss); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .doc-num-l {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .doc-sub {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .doc-posicoes { display: flex; flex-direction: column; gap: 16px; }
+  .doc-posicao {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 20px;
+  }
+  .doc-posicao-cargo { font-weight: 500; font-size: 14px; color: var(--text); margin-bottom: 2px; }
+  .doc-posicao-org { font-size: 13px; color: var(--moss); margin-bottom: 8px; }
+  .doc-posicao-meta {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .doc-posicao-discs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .doc-disc {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; padding: 3px 8px;
+    border: 1px solid var(--moss-line);
+    background: var(--moss-soft);
+    color: var(--moss); letter-spacing: 0.04em;
+  }
+  .doc-topicos { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .doc-topicos li {
+    font-size: 13px; color: var(--text-soft);
+    padding-left: 16px; position: relative;
+  }
+  .doc-topicos li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--accent); font-size: 11px;
+  }
+  @media (max-width: 900px) {
+    .doc-numeros { grid-template-columns: repeat(2, 1fr); }
+    .doc-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* ── CONTATO / FOOTER ── */
+  .contato-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 96px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px; align-items: center;
+  }
+  .contato-title {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 300; letter-spacing: -0.04em;
+    line-height: 1.1; margin: 0 0 24px;
+    color: var(--text);
+  }
+  .contato-desc { font-size: 15px; color: var(--text-soft); line-height: 1.7; margin-bottom: 32px; }
+  .contato-links { display: flex; flex-direction: column; gap: 16px; }
+  .contato-link {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color .15s, background .15s;
+  }
+  .contato-link:hover {
+    border-color: var(--moss);
+    background: var(--moss-soft);
+  }
+  .contato-link-code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--moss);
+    letter-spacing: 0.06em; min-width: 28px;
+  }
+  .contato-link-label { font-size: 14px; color: var(--text); flex: 1; }
+  .contato-link-url {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .footer-bar {
+    border-top: 1px solid var(--border);
+    padding: 20px 32px;
+    max-width: 1280px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; color: var(--muted);
+    letter-spacing: 0.08em;
+    flex-wrap: wrap; gap: 12px;
+  }
+  @media (max-width: 900px) {
+    .contato-inner { grid-template-columns: 1fr; gap: 48px; padding: 64px 20px; }
+  }
+  @media (max-width: 640px) {
+    .footer-bar { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo">VBF</a>
+    <div class="nav-links">
+      <a href="#sobre" id="nl-sobre">Sobre</a>
+      <a href="#mapa" id="nl-mapa">Onde atuei</a>
+      <a href="#trajetoria" id="nl-trajetoria">Trajetória</a>
+      <a href="#projetos" id="nl-projetos">Projetos</a>
+      <a href="#publicacoes" id="nl-publicacoes">Publicações</a>
+      <a href="#docencia" id="nl-docencia">Docência</a>
+      <a href="#contato" id="nl-contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">BHZ · MG · Brasil — Disponível para novos projetos</div>
+    <h1 class="hero-name">
+      Victor<br>
+      Barcelos<br>
+      Ferreira<span class="dot">.</span>
+    </h1>
+    <p class="hero-tagline">
+      Economista e consultor em políticas públicas. Sócio da Sophos Governança,
+      doutorando pela USP/Esalq. Atuo entre pesquisa aplicada e prática municipal.
+    </p>
+    <div class="hero-stats">
+      <span>08 anos · 20 projetos · 10+ municípios · 120+ alunos · 5 publicações</span>
+      <a href="#sobre">↓ Role para conhecer</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-num">01</div>
+        <div class="section-label">Quem sou</div>
+      </div>
+      <h2 class="section-title">Economista que transita entre pesquisa e gestão pública</h2>
+    </div>
+    <div class="sobre-grid">
+      <div class="sobre-bio">
+        <p>Formado em Ciências Econômicas e Mestre em Economia Aplicada pela UFV, iniciei minha trajetória profissional em pesquisa educacional e migrei para políticas públicas ao ingressar na Fundação João Pinheiro, onde trabalhei por quase cinco anos no Departamento de Políticas Públicas.</p>
+        <p>Na FJP coordenei e executei mais de 14 projetos de pesquisa aplicada e consultoria para órgãos estaduais e municipais de Minas Gerais — de avaliações de impacto de programas sociais a sistemas de monitoramento governamental.</p>
+        <p>Em 2025 fundei a Sophos Governança, empresa focada em parcerias estratégicas com o setor público para planejamento, finanças públicas e gestão de pessoal. Hoje sou também professor de pós-graduação na MBA USP/Esalq e doutorando em Administração pela mesma instituição.</p>
+        <div class="formacao-list">
+          <div class="formacao-item">
+            <div class="formacao-titulo">Doutorado em Administração</div>
+            <div class="formacao-org">USP/Esalq</div>
+            <div class="formacao-date">2025 — atual</div>
+          </div>
+          <div class="formacao-item">
+            <div class="formacao-titulo">Mestrado em Economia Aplicada</div>
+            <div class="formacao-org">Universidade Federal de Viçosa (UFV)</div>
+            <div class="formacao-date">2018 — 2020</div>
+          </div>
+          <div class="formacao-item">
+            <div class="formacao-titulo">Bacharelado em Ciências Econômicas</div>
+            <div class="formacao-org">Universidade Federal de Viçosa (UFV)</div>
+            <div class="formacao-date">2014 — 2018</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sobre-stats">
+          <div class="stat-box">
+            <div class="stat-n">08</div>
+            <div class="stat-l">Anos de experiência</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-n">20</div>
+            <div class="stat-l">Projetos executados</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-n">10+</div>
+            <div class="stat-l">Municípios assessorados</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-n">120+</div>
+            <div class="stat-l">Alunos de pós-graduação</div>
+          </div>
+        </div>
+        <div class="sobre-tags">
+          <span class="tag">Avaliação de políticas públicas</span>
+          <span class="tag">Planejamento estratégico</span>
+          <span class="tag">Finanças públicas</span>
+          <span class="tag">Gestão de pessoal</span>
+          <span class="tag">Pesquisa aplicada</span>
+          <span class="tag">Economia aplicada</span>
+          <span class="tag">Gestão municipal</span>
+          <span class="tag">Monitoramento e avaliação</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="section" id="mapa">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-num">02</div>
+        <div class="section-label">Atuação</div>
+      </div>
+      <h2 class="section-title">Onde atuei — municípios e órgãos estaduais de Minas Gerais</h2>
+    </div>
+    <div class="mapa-grid">
+      <div class="mapa-svg-wrap">
+        <svg viewBox="0 0 720 600" width="100%" height="100%">
+          <!-- Contorno aproximado de MG -->
+          <path d="M 100 200 Q 80 280 130 360 Q 110 460 170 510 Q 240 555 320 540 Q 410 560 490 540 Q 580 555 630 500 Q 660 430 620 360 Q 640 270 590 200 Q 540 140 460 130 Q 380 110 290 130 Q 210 115 160 150 Q 110 170 100 200 Z"
+                fill="oklch(88% 0.012 165)" stroke="oklch(75% 0.025 165)" stroke-width="1.5"/>
+          <!-- Cidades -->
+          <g id="mapa-cidades"></g>
+        </svg>
+        <div class="mapa-label">Minas Gerais · <span id="mapa-count">10</span> municípios</div>
+      </div>
+      <div class="mapa-panel">
+        <div class="mapa-panel-header">
+          <span>Municípios</span>
+          <span id="mapa-panel-count">10</span>
+        </div>
+        <div class="mapa-panel-list" id="mapa-lista"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAJETÓRIA -->
+<section class="section" id="trajetoria">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-num">03</div>
+        <div class="section-label">Experiência</div>
+      </div>
+      <h2 class="section-title">Trajetória profissional</h2>
+    </div>
+    <div class="traj-list" id="traj-list"></div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="section" id="projetos">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-num">04</div>
+        <div class="section-label">Portfólio</div>
+      </div>
+      <h2 class="section-title">Projetos de consultoria e pesquisa</h2>
+    </div>
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-chip active" data-filter="todos">Todos</button>
+      <button class="filter-chip" data-filter="destaque">★ Destaques</button>
+      <button class="filter-chip" data-filter="Planejamento estratégico">Planejamento</button>
+      <button class="filter-chip" data-filter="Finanças públicas">Finanças públicas</button>
+      <button class="filter-chip" data-filter="Avaliação de resultados">Avaliação</button>
+      <button class="filter-chip" data-filter="Pesquisa aplicada">Pesquisa</button>
+    </div>
+    <p class="proj-counter" id="proj-counter"></p>
+    <div class="proj-grid" id="proj-grid"></div>
+  </div>
+</section>
+
+<!-- PUBLICAÇÕES -->
+<section class="section" id="publicacoes">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-num">05</div>
+        <div class="section-label">Produção</div>
+      </div>
+      <h2 class="section-title">Publicações e pesquisa acadêmica</h2>
+    </div>
+    <div class="pub-list" id="pub-list"></div>
+  </div>
+</section>
+
+<!-- DOCÊNCIA -->
+<section class="section" id="docencia">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-num">06</div>
+        <div class="section-label">Ensino</div>
+      </div>
+      <h2 class="section-title">Docência e formação de gestores públicos</h2>
+    </div>
+    <p class="doc-manifesto">
+      Ensinar é a outra metade do trabalho. Levo para a sala de aula a prática que acumulei em prefeituras
+      e secretarias — e trago de volta perguntas mais afiadas para a próxima consultoria.
+    </p>
+    <div class="doc-numeros">
+      <div class="doc-num-item"><div class="doc-num-n">02</div><div class="doc-num-l">Disciplinas regulares</div></div>
+      <div class="doc-num-item"><div class="doc-num-n">120+</div><div class="doc-num-l">Alunos formados</div></div>
+      <div class="doc-num-item"><div class="doc-num-n">04</div><div class="doc-num-l">Orientações em curso</div></div>
+      <div class="doc-num-item"><div class="doc-num-n">06</div><div class="doc-num-l">Cursos de capacitação</div></div>
+    </div>
+    <div class="doc-grid">
+      <div>
+        <div class="doc-sub">Posições</div>
+        <div class="doc-posicoes">
+          <div class="doc-posicao">
+            <div class="doc-posicao-cargo">Professor de Pós-Graduação</div>
+            <div class="doc-posicao-org">MBA USP/Esalq</div>
+            <div class="doc-posicao-meta">EAD com encontros síncronos · desde 2026</div>
+            <div class="doc-posicao-discs">
+              <span class="doc-disc">Avaliação de Políticas Públicas</span>
+              <span class="doc-disc">Planejamento e Gestão Municipal</span>
+            </div>
+          </div>
+          <div class="doc-posicao">
+            <div class="doc-posicao-cargo">Instrutor convidado</div>
+            <div class="doc-posicao-org">Fundação João Pinheiro · Escola de Governo</div>
+            <div class="doc-posicao-meta">Cursos de curta duração · 2022 — 2024</div>
+            <div class="doc-posicao-discs">
+              <span class="doc-disc">Monitoramento e avaliação no PPAG</span>
+              <span class="doc-disc">Indicadores de desempenho</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="doc-sub">Tópicos de atuação</div>
+        <ul class="doc-topicos">
+          <li>Avaliação de políticas públicas (desenho, implementação, resultados, impacto)</li>
+          <li>Planejamento estratégico municipal e PPA</li>
+          <li>Gestão por resultados no setor público</li>
+          <li>Monitoramento de programas e indicadores</li>
+          <li>Finanças públicas e diagnóstico de custos</li>
+          <li>Métodos de pesquisa aplicada em administração pública</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<footer id="contato">
+  <div class="contato-inner">
+    <div>
+      <h2 class="contato-title">Vamos trabalhar juntos?</h2>
+      <p class="contato-desc">
+        Estou aberto a novos projetos de consultoria, pesquisa aplicada e parcerias com
+        gestores públicos e organizações do setor público.
+      </p>
+    </div>
+    <div class="contato-links">
+      <a class="contato-link" href="https://linkedin.com/in/victorbarcelosferreira" target="_blank">
+        <span class="contato-link-code">LI</span>
+        <span class="contato-link-label">LinkedIn</span>
+        <span class="contato-link-url">linkedin.com/in/victorbarcelosferreira</span>
+      </a>
+      <a class="contato-link" href="mailto:victorbarcelosf@gmail.com">
+        <span class="contato-link-code">@</span>
+        <span class="contato-link-label">E-mail</span>
+        <span class="contato-link-url">victorbarcelosf@gmail.com</span>
+      </a>
+      <a class="contato-link" href="http://lattes.cnpq.br/" target="_blank">
+        <span class="contato-link-code">Lα</span>
+        <span class="contato-link-label">Lattes</span>
+        <span class="contato-link-url">lattes.cnpq.br</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>© 2026 Victor Barcelos Ferreira · Belo Horizonte, MG</span>
+    <span>Economista · Consultor · Professor</span>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ── DADOS ── */
+const CIDADES = [
+  { id: 'bh',         x: 380, y: 380, nome: 'Belo Horizonte',  proj: 'PBH · ODS · Programa de Gestores Escolares', count: 2 },
+  { id: 'brumadinho', x: 350, y: 410, nome: 'Brumadinho',       proj: 'Plano Estratégico Municipal 2025–2028',       count: 1 },
+  { id: 'sete-lagoas',x: 360, y: 320, nome: 'Sete Lagoas',      proj: 'PCCVS SAAE · Diagnóstico Saúde · 3 projetos', count: 3 },
+  { id: 'patos',      x: 240, y: 280, nome: 'Patos de Minas',   proj: 'AMIPA · Avaliação do Proalminas',             count: 1 },
+  { id: 'vicosa',     x: 510, y: 450, nome: 'Viçosa',           proj: 'CECANE/UFV · Alimentação Escolar (PNAE)',     count: 1 },
+  { id: 'jf',         x: 580, y: 520, nome: 'Juiz de Fora',     proj: 'Consultorias estaduais',                      count: 1 },
+  { id: 'uberlandia', x: 140, y: 320, nome: 'Uberlândia',       proj: 'Avaliação do PRA · SEMAD-MG',                count: 1 },
+  { id: 'mont',       x: 320, y: 180, nome: 'Montes Claros',    proj: 'Rede Cuidar e SUAS · SEDESE-MG',             count: 1 },
+  { id: 'ouro-preto', x: 430, y: 420, nome: 'Ouro Preto',       proj: 'Política patrimonial municipal',              count: 1 },
+  { id: 'div',        x: 290, y: 460, nome: 'Divinópolis',      proj: 'Avaliação de programas sociais',              count: 1 },
+];
+
+const EXPERIENCIA = [
+  {
+    cargo: 'Professor de Pós-Graduação',
+    org: 'MBA USP/Esalq',
+    date: '2026 — atual', short: 'Atual',
+    desc: 'Disciplinas em programas de avaliação de políticas públicas, planejamento e gestão municipal.',
+    projects: [],
+  },
+  {
+    cargo: 'Sócio e Consultor',
+    org: 'Sophos Governança',
+    date: '2025 — atual', short: 'Atual',
+    desc: 'Parcerias estratégicas com prefeituras e autarquias para planejamento, finanças públicas e gestão de pessoal.',
+    projects: [
+      'Plano Estratégico Brumadinho 2025–2028',
+      'Adequação Jurídica do PCCVS — SAAE Sete Lagoas',
+      'Diagnóstico de Custos — Saúde de Sete Lagoas',
+    ],
+  },
+  {
+    cargo: 'Assessor de Políticas Públicas',
+    org: 'Fundação João Pinheiro · DPP',
+    date: '2020 — 2025', short: '4a 9m',
+    desc: 'Coordenação e execução de mais de quatorze projetos de pesquisa aplicada e consultoria para órgãos estaduais e municipais de Minas Gerais.',
+    projects: [
+      'Assessoramento ao PPAG · SEPLAG-MG (4 ciclos)',
+      'Avaliação do Proalminas · AMIPA',
+      'Pesquisa de Teletrabalho no Serviço Público',
+      'Avaliação do Voucher Habitacional · COHAB',
+      'M&A no Governo Estadual de MG',
+      'Sistema de Monitoramento dos ODS',
+      'Avaliação do PAA · SEAPA-MG',
+      'Avaliação do PRA · SEMAD-MG',
+      '+6 outros projetos',
+    ],
+  },
+  {
+    cargo: 'Pesquisador',
+    org: 'Herkenhoff & Prates',
+    date: '2019', short: 'Set–Dez',
+    desc: 'Pesquisa aplicada em consultoria educacional para instituições privadas.',
+    projects: ['Projeto de Melhoria Educacional'],
+  },
+];
+
+const PROJETOS = [
+  { id: 'brumadinho', titulo: 'Plano Estratégico Brumadinho 2025–2028', cliente: 'Prefeitura de Brumadinho', tipo: 'Planejamento estratégico', ano: 2025, destaque: true, resumo: '159 metas distribuídas em eixos temáticos, PPA 2026–2029 e estruturação do Comitê de Governança Estratégica.' },
+  { id: 'saude-sl', titulo: 'Diagnóstico de Custos — Saúde de Sete Lagoas', cliente: 'Prefeitura de Sete Lagoas', tipo: 'Finanças públicas', ano: 2026, destaque: true, resumo: 'Auditoria de R$ 594 mi empenhados em 2025, identificando R$ 7–20 mi em economia potencial.' },
+  { id: 'saae', titulo: 'Adequação Jurídica do PCCVS — SAAE', cliente: 'SAAE Sete Lagoas', tipo: 'Gestão de pessoal', ano: 2025, destaque: true, resumo: 'Revisão da minuta do Plano de Cargos resolvendo dez pontos críticos da Ação Civil Pública do MPMG.' },
+  { id: 'ppag', titulo: 'Assessoramento ao PPAG — Quatro ciclos', cliente: 'SEPLAG-MG', tipo: 'Planejamento governamental', ano: 2024, destaque: true, resumo: 'Quatro ciclos anuais do PPAG mineiro, com análise de desempenho de mais de cem programas.' },
+  { id: 'proalminas', titulo: 'Avaliação de Resultados do Proalminas', cliente: 'AMIPA', tipo: 'Avaliação de resultados', ano: 2021, destaque: true, resumo: 'Avaliação contrafactual do programa de assistência técnica para agricultores familiares.' },
+  { id: 'teletrabalho', titulo: 'Pesquisa de Teletrabalho no Serviço Público', cliente: 'FJP / SEPLAG-MG', tipo: 'Pesquisa aplicada', ano: 2020, destaque: false, resumo: 'Survey com servidores estaduais durante a pandemia — base para a política estadual de teletrabalho.' },
+  { id: 'cohab', titulo: 'Avaliação do Voucher Habitacional', cliente: 'COHAB Minas', tipo: 'Avaliação de desenho', ano: 2021, destaque: false, resumo: 'Análise de desenho e implementação do programa de subsídio habitacional estadual.' },
+  { id: 'reciclagem', titulo: 'Programa Bolsa Reciclagem', cliente: 'SEMAD-MG', tipo: 'Avaliação de resultados', ano: 2022, destaque: false, resumo: 'Avaliação de resultados do programa de incentivo à reciclagem em Minas Gerais.' },
+  { id: 'ods-mg', titulo: 'Sistema de Monitoramento dos ODS em MG', cliente: 'SEPLAG-MG', tipo: 'Planejamento', ano: 2022, destaque: false, resumo: 'Construção do sistema de monitoramento estadual dos Objetivos de Desenvolvimento Sustentável.' },
+  { id: 'pra', titulo: 'Avaliação de Implementação do PRA', cliente: 'SEMAD-MG', tipo: 'Avaliação de implementação', ano: 2024, destaque: false, resumo: 'Análise da implementação do Programa de Regularização Ambiental.' },
+  { id: 'rede-cuidar', titulo: 'Rede Cuidar e SUAS', cliente: 'SEDESE-MG', tipo: 'Políticas sociais', ano: 2024, destaque: false, resumo: 'Consultoria em políticas de proteção social e fortalecimento da Rede Cuidar.' },
+  { id: 'cecane', titulo: 'Assessoria PNAE — Alimentação Escolar', cliente: 'CECANE/UFV', tipo: 'Nutrição escolar', ano: 2017, destaque: false, resumo: 'Assessoria técnica a municípios na execução do Programa Nacional de Alimentação Escolar.' },
+  { id: 'ma-mg', titulo: 'M&A no Governo Estadual de MG', cliente: 'FJP / Governo MG', tipo: 'Pesquisa aplicada', ano: 2021, destaque: false, resumo: 'Pesquisa sobre experiências de monitoramento e avaliação no governo estadual mineiro.' },
+];
+
+const PUBLICACOES = [
+  { titulo: 'Teletrabalho no serviço público mineiro durante a pandemia', veiculo: 'Fundação João Pinheiro', ano: 2021, tipo: 'Relatório técnico' },
+  { titulo: 'Avaliação contrafactual do Proalminas: efeitos da extensão rural sobre agricultores familiares', veiculo: 'Cadernos de Avaliação · AMIPA', ano: 2022, tipo: 'Artigo' },
+  { titulo: 'Monitoramento dos ODS no Estado de Minas Gerais: arquitetura institucional', veiculo: 'SEPLAG-MG', ano: 2023, tipo: 'Capítulo de livro' },
+  { titulo: 'Planejamento estratégico municipal: lições do caso Brumadinho', veiculo: 'Revista de Administração Pública', ano: 2026, tipo: 'Artigo (em revisão)' },
+  { titulo: 'M&A no Governo Estadual: experiências mineiras', veiculo: 'FJP — NIMA', ano: 2021, tipo: 'Pesquisa aplicada' },
+];
+
+/* ── MAPA ── */
+let mapaActive = null;
+
+function buildMapa() {
+  const g = document.getElementById('mapa-cidades');
+  CIDADES.forEach(c => {
+    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    group.style.cursor = 'pointer';
+    group.addEventListener('mouseenter', () => setMapaActive(c.id));
+    group.addEventListener('mouseleave', () => setMapaActive(null));
+    group.addEventListener('click', () => setMapaActive(mapaActive === c.id ? null : c.id));
+
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', c.x);
+    circle.setAttribute('cy', c.y);
+    circle.setAttribute('r', 5);
+    circle.setAttribute('fill', 'oklch(32% 0.04 165)');
+    circle.setAttribute('stroke', 'oklch(95% 0.01 165)');
+    circle.setAttribute('stroke-width', '1.5');
+    circle.style.transition = 'r .15s, fill .15s';
+    circle.id = 'dot-' + c.id;
+    group.appendChild(circle);
+    g.appendChild(group);
+  });
+
+  const lista = document.getElementById('mapa-lista');
+  CIDADES.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'mapa-item';
+    div.id = 'item-' + c.id;
+    div.innerHTML = `<div class="mapa-item-nome">${c.nome}<span class="mapa-item-count">${c.count}</span></div><div class="mapa-item-proj">${c.proj}</div>`;
+    div.addEventListener('mouseenter', () => setMapaActive(c.id));
+    div.addEventListener('mouseleave', () => setMapaActive(null));
+    div.addEventListener('click', () => setMapaActive(mapaActive === c.id ? null : c.id));
+    lista.appendChild(div);
+  });
+}
+
+function setMapaActive(id) {
+  mapaActive = id;
+  CIDADES.forEach(c => {
+    const dot = document.getElementById('dot-' + c.id);
+    const item = document.getElementById('item-' + c.id);
+    const isActive = c.id === id;
+    if (dot) {
+      dot.setAttribute('r', isActive ? 8 : 5);
+      dot.setAttribute('fill', isActive ? 'oklch(60% 0.12 60)' : 'oklch(32% 0.04 165)');
+    }
+    if (item) item.classList.toggle('active', isActive);
+  });
+}
+
+/* ── TRAJETÓRIA ── */
+function buildTrajetoria() {
+  const list = document.getElementById('traj-list');
+  EXPERIENCIA.forEach(e => {
+    const div = document.createElement('div');
+    div.className = 'traj-item';
+    const projs = e.projects.length
+      ? `<div class="traj-projetos">${e.projects.map(p => `<div class="traj-proj">${p}</div>`).join('')}</div>`
+      : '';
+    div.innerHTML = `
+      <div class="traj-date">
+        <span class="traj-short">${e.short}</span><br>${e.date}
+      </div>
+      <div>
+        <div class="traj-cargo">${e.cargo}</div>
+        <div class="traj-org">${e.org}</div>
+        <div class="traj-desc">${e.desc}</div>
+        ${projs}
+      </div>
+    `;
+    list.appendChild(div);
+  });
+}
+
+/* ── PROJETOS ── */
+let filterAtivo = 'todos';
+
+function buildProjetos(filter) {
+  filterAtivo = filter;
+  const grid = document.getElementById('proj-grid');
+  const counter = document.getElementById('proj-counter');
+  grid.innerHTML = '';
+
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.classList.toggle('active', chip.dataset.filter === filter);
+  });
+
+  const visiveis = PROJETOS.filter(p => {
+    if (filter === 'todos') return true;
+    if (filter === 'destaque') return p.destaque;
+    return p.tipo === filter || p.tipo.includes(filter);
+  });
+
+  counter.textContent = `Exibindo ${visiveis.length} de ${PROJETOS.length} projetos`;
+
+  visiveis.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'proj-card';
+    card.onclick = () => openModal(p.id);
+    card.innerHTML = `
+      ${p.destaque ? '<span class="proj-card-star">★</span>' : ''}
+      <div class="proj-card-ano">${p.ano}</div>
+      <div class="proj-card-titulo">${p.titulo}</div>
+      <div class="proj-card-cliente">${p.cliente}</div>
+      <div class="proj-card-tipo">${p.tipo}</div>
+      <div class="proj-card-resumo">${p.resumo}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => buildProjetos(chip.dataset.filter));
+});
+
+/* ── MODAL ── */
+function openModal(id) {
+  const p = PROJETOS.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-tipo">${p.tipo}</div>
+    <div class="modal-titulo">${p.titulo}</div>
+    <div class="modal-cliente">${p.cliente} · ${p.ano}</div>
+    <div class="modal-resumo">${p.resumo}</div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ── PUBLICAÇÕES ── */
+function buildPublicacoes() {
+  const list = document.getElementById('pub-list');
+  PUBLICACOES.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'pub-item';
+    div.innerHTML = `
+      <div class="pub-ano">${p.ano}</div>
+      <div>
+        <span class="pub-tipo">${p.tipo}</span>
+        <div class="pub-titulo">${p.titulo}</div>
+        <div class="pub-veiculo">${p.veiculo}</div>
+      </div>
+    `;
+    list.appendChild(div);
+  });
+}
+
+/* ── NAV SCROLL HIGHLIGHT ── */
+function setupNavHighlight() {
+  const sections = ['sobre','mapa','trajetoria','projetos','publicacoes','docencia','contato'];
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        sections.forEach(id => {
+          const a = document.getElementById('nl-' + id);
+          if (a) a.classList.toggle('active', entry.target.id === id);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) obs.observe(el);
+  });
+}
+
+/* ── INIT ── */
+buildMapa();
+buildTrajetoria();
+buildProjetos('todos');
+buildPublicacoes();
+setupNavHighlight();
+</script>
+</body>
+</html>
