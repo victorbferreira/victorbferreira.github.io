@@ -1347,9 +1347,9 @@ function buildMapa() {
   const map = L.map('mapa-leaflet', { zoomControl: true, scrollWheelZoom: false })
                .setView([-18.5, -44.5], 6);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© OpenStreetMap · © CARTO',
-    subdomains: 'abcd', maxZoom: 14,
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19,
   }).addTo(map);
 
   const markers = {};
