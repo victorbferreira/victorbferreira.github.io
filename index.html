@@ -1209,6 +1209,32 @@
   </div>
 </footer>
 
+<!-- COLOFÃO -->
+<section style="padding:64px 32px;background:var(--moss-deep);color:oklch(92% 0.02 165);border-top:1px solid var(--moss);">
+  <div class="colofao-grid" style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:48px;">
+    <div>
+      <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:oklch(75% 0.04 165);margin-bottom:10px;">Colofão</div>
+      <div style="font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:13px;color:oklch(80% 0.03 165);line-height:1.5;">Sobre quem fez<br>este site.</div>
+    </div>
+    <div>
+      <p style="margin:0 0 20px;font-family:'Source Serif 4',Georgia,serif;font-size:22px;line-height:1.45;color:oklch(95% 0.02 165);letter-spacing:-0.005em;max-width:720px;">
+        Concepção, estruturação e implementação <em style="color:oklch(78% 0.06 60);">inteiramente</em> minhas — do primeiro rascunho ao último ajuste de CSS.
+      </p>
+      <p style="margin:0;font-size:14px;line-height:1.65;color:oklch(80% 0.02 165);max-width:640px;font-family:'Inter Tight',system-ui,sans-serif;">
+        Não há agência, template ou page-builder por trás. Cada decisão de tipografia, cor,
+        arquitetura de informação e código foi tomada e executada por mim — porque acredito
+        que um portfólio também é um projeto.
+      </p>
+      <div style="margin-top:28px;padding-top:20px;border-top:1px solid oklch(40% 0.04 165);display:flex;gap:28px;flex-wrap:wrap;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(70% 0.04 165);">
+        <span><span style="opacity:0.6;">Autoria</span>&nbsp;&nbsp;Victor B. Ferreira</span>
+        <span><span style="opacity:0.6;">Tipografia</span>&nbsp;&nbsp;Inter Tight · Source Serif 4 · JetBrains Mono</span>
+        <span><span style="opacity:0.6;">Versão</span>&nbsp;&nbsp;<script>document.write(new Date().getFullYear())</script>.01</span>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@media (max-width:880px){.colofao-grid{grid-template-columns:1fr !important;gap:24px !important;}}</style>
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal" id="modalContent">
