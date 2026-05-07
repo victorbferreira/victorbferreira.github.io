@@ -487,6 +487,17 @@
   }
   .pub-titulo { font-weight: 500; font-size: 14px; color: var(--text); margin-bottom: 4px; }
   .pub-veiculo { font-size: 13px; color: var(--muted); }
+  .pub-link {
+    display: inline-block;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px; font-style: normal;
+    color: var(--muted);
+    margin-left: 6px;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .12s, transform .12s;
+  }
+  .pub-link:hover { color: var(--moss); transform: translate(1px, -1px); }
   @media (max-width: 640px) {
     .pub-item { grid-template-columns: 1fr; gap: 8px; }
   }
@@ -1311,12 +1322,12 @@ const PROJETOS = [
 ];
 
 const PUBLICACOES = [
-  { titulo: 'Avaliação dos resultados do Programa Mineiro de Incentivo à Cultura do Algodão (Proalminas)', veiculo: 'Revista Brasileira de Avaliação', coautores: 'c/ João Batista Rezende', ano: 2023, tipo: 'Artigo' },
-  { titulo: 'A distribuição de insumos escolares e seu impacto sobre a desigualdade educacional: uma análise do efeito professor sobre o 9º ano da rede pública de MG', veiculo: 'INTERFACE (Natal)', coautores: 'c/ Luisa Sousa, Bruno Costa, Reinaldo Morais', ano: 2022, tipo: 'Artigo' },
-  { titulo: 'Capacidades estatais no PNAE em MG: uma análise comparada da implementação nas redes estadual e municipal', veiculo: 'NAU – Revista Eletrônica da Residência Social', coautores: 'c/ Ricardo Carneiro, Lauro Vicari', ano: 2021, tipo: 'Artigo' },
-  { titulo: 'Nadando contra a Corrente: Equidade e Desempenho nas Redes Municipais de Ensino Fundamental em MG', veiculo: 'Revista Brasileira de Políticas Públicas e Internacionais', coautores: 'c/ Bruno Diniz Costa', ano: 2021, tipo: 'Artigo' },
-  { titulo: 'O impacto da distorção idade-série sobre a criminalidade nos municípios de Minas Gerais', veiculo: 'Revista Brasileira de Segurança Pública', coautores: 'c/ Evandro Camargos Teixeira', ano: 2019, tipo: 'Artigo' },
-  { titulo: 'Democracia deliberativa, capital social e coprodução de serviços públicos: potenciais e desafios na construção da sinergia Estado-sociedade', veiculo: 'NAU – Revista Eletrônica da Residência Social', coautores: 'c/ Bruno Diniz Costa, Flávia Brasil', ano: 2019, tipo: 'Artigo' },
+  { titulo: 'Avaliação dos resultados do Programa Mineiro de Incentivo à Cultura do Algodão (Proalminas)', veiculo: 'Revista Brasileira de Avaliação', coautores: 'c/ João Batista Rezende', ano: 2023, tipo: 'Artigo', url: 'https://doi.org/10.4322/rbaval202312030' },
+  { titulo: 'A distribuição de insumos escolares e seu impacto sobre a desigualdade educacional: uma análise do efeito professor sobre o 9º ano da rede pública de MG', veiculo: 'INTERFACE (Natal)', coautores: 'c/ Luisa Sousa, Bruno Costa, Reinaldo Morais', ano: 2022, tipo: 'Artigo', url: 'https://ojs.ccsa.ufrn.br/index.php/interface/article/view/1272' },
+  { titulo: 'Capacidades estatais no PNAE em MG: uma análise comparada da implementação nas redes estadual e municipal', veiculo: 'NAU – Revista Eletrônica da Residência Social', coautores: 'c/ Ricardo Carneiro, Lauro Vicari', ano: 2021, tipo: 'Artigo', url: 'https://periodicos.ufba.br/index.php/nausocial/article/view/33947' },
+  { titulo: 'Nadando contra a Corrente: Equidade e Desempenho nas Redes Municipais de Ensino Fundamental em MG', veiculo: 'Revista Brasileira de Políticas Públicas e Internacionais', coautores: 'c/ Bruno Diniz Costa', ano: 2021, tipo: 'Artigo', url: 'https://periodicos.ufpb.br/index.php/rppi/article/view/53099' },
+  { titulo: 'O impacto da distorção idade-série sobre a criminalidade nos municípios de Minas Gerais', veiculo: 'Revista Brasileira de Segurança Pública', coautores: 'c/ Evandro Camargos Teixeira', ano: 2019, tipo: 'Artigo', url: 'https://revista.forumseguranca.org.br/rbsp/article/view/960' },
+  { titulo: 'Democracia deliberativa, capital social e coprodução de serviços públicos: potenciais e desafios na construção da sinergia Estado-sociedade', veiculo: 'NAU – Revista Eletrônica da Residência Social', coautores: 'c/ Bruno Diniz Costa, Flávia Brasil', ano: 2019, tipo: 'Artigo', url: 'https://periodicos.ufba.br/index.php/nausocial/article/view/33931' },
 ];
 
 /* ── MAPA ── */
@@ -1516,7 +1527,10 @@ function buildPublicacoes() {
       <div class="pub-ano">${p.ano}</div>
       <div>
         <span class="pub-tipo">${p.tipo}</span>
-        <div class="pub-titulo">${p.titulo}</div>
+        <div class="pub-titulo">
+          ${p.titulo}
+          ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" class="pub-link" title="Acessar artigo">↗</a>` : ''}
+        </div>
         <div class="pub-veiculo">${p.veiculo}${p.coautores ? ' · ' + p.coautores : ''}</div>
       </div>
     `;
