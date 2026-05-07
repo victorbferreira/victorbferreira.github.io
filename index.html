@@ -573,6 +573,236 @@
     .doc-grid { grid-template-columns: 1fr; gap: 32px; }
   }
 
+  /* ── PROJETOS (case study + lista) ── */
+  #projetos { padding: 0; border-bottom: 1px solid var(--border); }
+
+  .cs-wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  .cs-top { padding: 80px 0 56px; }
+  .cs-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: oklch(40% 0.04 165); margin-bottom: 20px;
+  }
+  .cs-main-title {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: clamp(26px, 3.2vw, 40px); font-weight: 400;
+    letter-spacing: -0.025em; line-height: 1.2;
+    color: var(--text); margin: 0; max-width: 720px;
+  }
+
+  /* Band */
+  .cs-band {
+    position: relative; overflow: hidden;
+    background: oklch(40% 0.06 165);
+    padding: 48px 32px;
+  }
+  .cs-band-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+  .cs-band-lines {
+    position: absolute; inset: 0; z-index: 0;
+    background-image: repeating-linear-gradient(
+      -45deg, transparent, transparent 28px,
+      rgba(255,255,255,0.08) 28px, rgba(255,255,255,0.08) 29px
+    );
+  }
+  .cs-badge {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: oklch(80% 0.03 165); margin-bottom: 20px;
+  }
+  .cs-band-title {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: clamp(24px, 3vw, 38px); font-weight: 400;
+    letter-spacing: -0.03em; line-height: 1.15;
+    color: oklch(95% 0.01 165); margin: 0 0 16px;
+  }
+  .cs-band-meta {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.08em;
+    color: oklch(70% 0.03 165);
+  }
+  .cs-band-meta span { margin: 0 10px; opacity: .5; }
+
+  /* Stats */
+  .cs-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+  .cs-stat {
+    padding: 32px;
+    border-right: 1px solid var(--border);
+  }
+  .cs-stat:last-child { border-right: none; }
+  .cs-stat-n {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 56px; font-weight: 300;
+    letter-spacing: -0.04em; line-height: 1;
+    color: oklch(40% 0.06 165); margin-bottom: 6px;
+  }
+  .cs-stat-l {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted);
+  }
+
+  /* 3 colunas */
+  .cs-cols {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+  .cs-col {
+    padding: 40px 32px;
+    border-right: 1px solid var(--border);
+  }
+  .cs-col:last-child { border-right: none; }
+  .cs-col-head {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: oklch(40% 0.06 165);
+    padding-bottom: 10px;
+    border-bottom: 1px solid oklch(40% 0.06 165);
+    margin-bottom: 18px;
+  }
+  .cs-col-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px; line-height: 1.65; color: var(--text-soft);
+  }
+
+  /* Lista */
+  .proj-list-section {
+    background: oklch(95% 0.005 250);
+    padding: 64px 0 0;
+  }
+  .proj-list-header { padding: 0 32px 32px; max-width: 1280px; margin: 0 auto; }
+  .proj-list-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .proj-list-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: clamp(20px, 2.2vw, 28px); font-weight: 400;
+    font-style: italic; color: var(--text);
+    margin: 0 0 6px;
+  }
+  .proj-list-counter {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--muted); letter-spacing: 0.06em;
+  }
+
+  /* Filtros */
+  .proj-filters {
+    display: flex; gap: 0; flex-wrap: wrap;
+    padding: 0 32px; max-width: 1280px; margin: 0 auto 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .pf-chip {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.06em;
+    padding: 12px 18px;
+    background: none; border: none;
+    color: var(--muted); cursor: pointer;
+    position: relative; transition: color .12s;
+    white-space: nowrap;
+  }
+  .pf-chip::after {
+    content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+    height: 2px; background: oklch(40% 0.06 165);
+    transform: scaleX(0); transition: transform .15s;
+  }
+  .pf-chip:hover { color: var(--text); }
+  .pf-chip.active { color: var(--text); }
+  .pf-chip.active::after { transform: scaleX(1); }
+  .pf-count {
+    font-size: 9px; opacity: .6; margin-left: 4px;
+    vertical-align: super;
+  }
+
+  /* Viewport com scroll customizado */
+  .proj-viewport-wrap {
+    position: relative; max-width: 1280px; margin: 0 auto;
+    padding: 0 32px;
+  }
+  .proj-viewport {
+    height: 540px; overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .proj-viewport::-webkit-scrollbar { display: none; }
+  .proj-viewport-mask {
+    position: absolute; left: 32px; right: 44px; pointer-events: none;
+    top: 0; height: 40px;
+    background: linear-gradient(oklch(95% 0.005 250), transparent);
+    z-index: 2;
+  }
+  .proj-viewport-mask.bottom {
+    top: auto; bottom: 0;
+    background: linear-gradient(transparent, oklch(95% 0.005 250));
+  }
+  .proj-scrollbar {
+    position: absolute; right: 32px; top: 0; bottom: 0;
+    width: 4px; background: var(--border);
+  }
+  .proj-scrollbar-thumb {
+    position: absolute; width: 4px; left: 0;
+    background: oklch(40% 0.06 165);
+    transition: top .05s linear;
+  }
+
+  /* Cards de projeto */
+  .proj-item-card {
+    display: grid;
+    grid-template-columns: 64px 1fr 1.3fr;
+    gap: 0 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border-soft);
+    align-items: start;
+  }
+  .proj-item-card:last-child { border-bottom: none; }
+  .proj-item-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic; font-size: 28px;
+    line-height: 1; padding-top: 4px;
+  }
+  .proj-item-titulo {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 22px; font-weight: 400;
+    letter-spacing: -0.018em; line-height: 1.2;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .proj-item-cliente {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic; font-size: 14px;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  .proj-item-ficha {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px;
+    display: flex; flex-wrap: wrap; gap: 0 8px; align-items: center;
+  }
+  .proj-item-dot { font-size: 8px; }
+  .proj-item-resumo {
+    font-size: 14px; line-height: 1.6; color: var(--text-soft);
+  }
+
+  @media (max-width: 900px) {
+    .cs-stats { grid-template-columns: repeat(2, 1fr); }
+    .cs-cols { grid-template-columns: 1fr; }
+    .cs-col { border-right: none; border-bottom: 1px solid var(--border); }
+    .cs-col:last-child { border-bottom: none; }
+    .proj-item-card { grid-template-columns: 40px 1fr; }
+    .proj-item-card > div:last-child { grid-column: 2; }
+  }
+  @media (max-width: 640px) {
+    .cs-band { padding: 36px 20px; }
+    .cs-stat { padding: 24px 20px; }
+    .cs-col { padding: 32px 20px; }
+    .proj-list-header, .proj-filters, .proj-viewport-wrap { padding-left: 20px; padding-right: 20px; }
+    .proj-scrollbar { right: 20px; }
+    .proj-viewport-mask { left: 20px; right: 32px; }
+    .cs-stat-n { font-size: 40px; }
+  }
+
   /* ── CONTATO / FOOTER ── */
   .contato-inner {
     max-width: 1280px; margin: 0 auto;
@@ -768,26 +998,73 @@
 </section>
 
 <!-- PROJETOS -->
-<section class="section" id="projetos">
-  <div class="section-inner">
-    <div class="section-head">
-      <div>
-        <div class="section-num">04</div>
-        <div class="section-label">Portfólio</div>
-      </div>
-      <h2 class="section-title">Projetos de consultoria e pesquisa</h2>
-    </div>
-    <div class="filter-bar" id="filter-bar">
-      <button class="filter-chip active" data-filter="todos">Todos</button>
-      <button class="filter-chip" data-filter="destaque">★ Destaques</button>
-      <button class="filter-chip" data-filter="Planejamento estratégico">Planejamento</button>
-      <button class="filter-chip" data-filter="Finanças públicas">Finanças públicas</button>
-      <button class="filter-chip" data-filter="Avaliação de resultados">Avaliação</button>
-      <button class="filter-chip" data-filter="Pesquisa aplicada">Pesquisa</button>
-    </div>
-    <p class="proj-counter" id="proj-counter"></p>
-    <div class="proj-grid" id="proj-grid"></div>
+<section id="projetos">
+
+  <!-- PARTE 1: Case study -->
+  <div class="cs-top cs-wrap">
+    <div class="cs-eyebrow">04 — Projetos</div>
+    <h2 class="cs-main-title">Em foco. Um caso desenvolvido + onze projetos catalogados.</h2>
   </div>
+
+  <div class="cs-band">
+    <div class="cs-band-lines"></div>
+    <div class="cs-band-inner">
+      <div class="cs-badge">● Case study desenvolvido — Planejamento &amp; Gestão</div>
+      <h3 class="cs-band-title">Plano Estratégico Brumadinho 2025–2028</h3>
+      <div class="cs-band-meta">
+        Prefeitura Municipal de Brumadinho
+        <span>·</span>
+        2025–2026
+        <span>·</span>
+        Consultoria em Planejamento Estratégico Municipal
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-stats">
+    <div class="cs-stat"><div class="cs-stat-n">159</div><div class="cs-stat-l">Metas pactuadas</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">07</div><div class="cs-stat-l">Eixos temáticos</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">04</div><div class="cs-stat-l">Anos PPA</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">15</div><div class="cs-stat-l">Secretarias envolvidas</div></div>
+  </div>
+
+  <div class="cs-cols">
+    <div class="cs-col">
+      <div class="cs-col-head">01 · Desafio</div>
+      <p class="cs-col-text">Após a tragédia de 2019, o município precisava de um plano estratégico que articulasse prioridades, recursos e governança para a próxima década — e que se traduzisse em PPA executável.</p>
+    </div>
+    <div class="cs-col">
+      <div class="cs-col-head">02 · Método</div>
+      <p class="cs-col-text">Diagnóstico em sete eixos, 12 oficinas com secretarias, modelagem de metas SMART e desenho da governança de monitoramento (Comitê Estratégico + relatórios trimestrais).</p>
+    </div>
+    <div class="cs-col">
+      <div class="cs-col-head">03 · Resultado</div>
+      <p class="cs-col-text">Plano aprovado em 2025, alinhado ao PPA 2026–2029 e em execução pelo Comitê de Governança. Modelo replicável documentado para outros municípios.</p>
+    </div>
+  </div>
+
+  <!-- PARTE 2: Lista -->
+  <div class="proj-list-section">
+    <div class="proj-list-header">
+      <div class="proj-list-eyebrow">Demais projetos</div>
+      <div class="proj-list-title">Onze projetos. Cinco áreas distintas.</div>
+      <div class="proj-list-counter" id="proj-list-counter">11 de 11 · ↓ Role para ver todos</div>
+    </div>
+
+    <div class="proj-filters" id="proj-filters"></div>
+
+    <div class="proj-viewport-wrap">
+      <div class="proj-viewport-mask"></div>
+      <div class="proj-viewport" id="proj-viewport">
+        <div id="proj-cards"></div>
+      </div>
+      <div class="proj-viewport-mask bottom"></div>
+      <div class="proj-scrollbar">
+        <div class="proj-scrollbar-thumb" id="proj-thumb"></div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- PUBLICAÇÕES -->
@@ -1003,20 +1280,27 @@ const EXPERIENCIA = [
   },
 ];
 
+const CAT_CORES = {
+  'Planejamento & Gestão':  'oklch(40% 0.06 165)',
+  'Avaliação de Políticas': 'oklch(48% 0.08 50)',
+  'Finanças Públicas':      'oklch(50% 0.10 80)',
+  'Pesquisa Aplicada':      'oklch(38% 0.06 290)',
+  'Políticas Sociais':      'oklch(45% 0.08 25)',
+  'Gestão de Pessoal':      'oklch(40% 0.05 200)',
+};
+
 const PROJETOS = [
-  { id: 'brumadinho', titulo: 'Plano Estratégico Brumadinho 2025–2028', cliente: 'Prefeitura de Brumadinho', tipo: 'Planejamento estratégico', ano: 2025, destaque: true, resumo: '159 metas distribuídas em eixos temáticos, PPA 2026–2029 e estruturação do Comitê de Governança Estratégica.' },
-  { id: 'saude-sl', titulo: 'Diagnóstico de Custos — Saúde de Sete Lagoas', cliente: 'Prefeitura de Sete Lagoas', tipo: 'Finanças públicas', ano: 2026, destaque: true, resumo: 'Auditoria de R$ 594 mi empenhados em 2025, identificando R$ 7–20 mi em economia potencial.' },
-  { id: 'saae', titulo: 'Adequação Jurídica do PCCVS — SAAE', cliente: 'SAAE Sete Lagoas', tipo: 'Gestão de pessoal', ano: 2025, destaque: true, resumo: 'Revisão da minuta do Plano de Cargos resolvendo dez pontos críticos da Ação Civil Pública do MPMG.' },
-  { id: 'ppag', titulo: 'Assessoramento ao PPAG — Quatro ciclos', cliente: 'SEPLAG-MG', tipo: 'Planejamento governamental', ano: 2024, destaque: true, resumo: 'Quatro ciclos anuais do PPAG mineiro, com análise de desempenho de mais de cem programas.' },
-  { id: 'proalminas', titulo: 'Avaliação de Resultados do Proalminas', cliente: 'AMIPA', tipo: 'Avaliação de resultados', ano: 2021, destaque: true, resumo: 'Avaliação contrafactual do programa de assistência técnica para agricultores familiares.' },
-  { id: 'teletrabalho', titulo: 'Pesquisa de Teletrabalho no Serviço Público', cliente: 'FJP / SEPLAG-MG', tipo: 'Pesquisa aplicada', ano: 2020, destaque: false, resumo: 'Survey com servidores estaduais durante a pandemia — base para a política estadual de teletrabalho.' },
-  { id: 'cohab', titulo: 'Avaliação do Voucher Habitacional', cliente: 'COHAB Minas', tipo: 'Avaliação de desenho', ano: 2021, destaque: false, resumo: 'Análise de desenho e implementação do programa de subsídio habitacional estadual.' },
-  { id: 'reciclagem', titulo: 'Programa Bolsa Reciclagem', cliente: 'SEMAD-MG', tipo: 'Avaliação de resultados', ano: 2022, destaque: false, resumo: 'Avaliação de resultados do programa de incentivo à reciclagem em Minas Gerais.' },
-  { id: 'ods-mg', titulo: 'Sistema de Monitoramento dos ODS em MG', cliente: 'SEPLAG-MG', tipo: 'Planejamento', ano: 2022, destaque: false, resumo: 'Construção do sistema de monitoramento estadual dos Objetivos de Desenvolvimento Sustentável.' },
-  { id: 'pra', titulo: 'Avaliação de Implementação do PRA', cliente: 'SEMAD-MG', tipo: 'Avaliação de implementação', ano: 2024, destaque: false, resumo: 'Análise da implementação do Programa de Regularização Ambiental.' },
-  { id: 'rede-cuidar', titulo: 'Rede Cuidar e SUAS', cliente: 'SEDESE-MG', tipo: 'Políticas sociais', ano: 2024, destaque: false, resumo: 'Consultoria em políticas de proteção social e fortalecimento da Rede Cuidar.' },
-  { id: 'cecane', titulo: 'Assessoria PNAE — Alimentação Escolar', cliente: 'CECANE/UFV', tipo: 'Nutrição escolar', ano: 2017, destaque: false, resumo: 'Assessoria técnica a municípios na execução do Programa Nacional de Alimentação Escolar.' },
-  { id: 'ma-mg', titulo: 'M&A no Governo Estadual de MG', cliente: 'FJP / Governo MG', tipo: 'Pesquisa aplicada', ano: 2021, destaque: false, resumo: 'Pesquisa sobre experiências de monitoramento e avaliação no governo estadual mineiro.' },
+  { titulo: 'Diagnóstico de Custos — Saúde de Sete Lagoas',    cliente: 'Prefeitura de Sete Lagoas',  tipo: 'Finanças públicas',           ano: 2026, cat: 'Finanças Públicas',      resumo: 'Auditoria de R$ 594 mi empenhados em 2025, identificando R$ 7–20 mi em economia potencial.' },
+  { titulo: 'Adequação Jurídica do PCCVS — SAAE',              cliente: 'SAAE Sete Lagoas',           tipo: 'Gestão de pessoal',           ano: 2025, cat: 'Gestão de Pessoal',      resumo: 'Revisão da minuta do Plano de Cargos resolvendo dez pontos críticos da Ação Civil Pública do MPMG.' },
+  { titulo: 'Assessoramento ao PPAG — Quatro ciclos',          cliente: 'SEPLAG-MG',                  tipo: 'Planejamento governamental',  ano: 2024, cat: 'Planejamento & Gestão',  resumo: 'Quatro ciclos anuais do PPAG mineiro, com análise de desempenho de mais de cem programas.' },
+  { titulo: 'Avaliação de Implementação do PRA',               cliente: 'SEMAD-MG',                   tipo: 'Avaliação de implementação',  ano: 2024, cat: 'Avaliação de Políticas', resumo: 'Análise da implementação do Programa de Regularização Ambiental.' },
+  { titulo: 'Rede Cuidar e SUAS',                              cliente: 'SEDESE-MG',                  tipo: 'Políticas sociais',           ano: 2024, cat: 'Políticas Sociais',      resumo: 'Consultoria em políticas de proteção social e fortalecimento da Rede Cuidar.' },
+  { titulo: 'Programa Bolsa Reciclagem',                       cliente: 'SEMAD-MG',                   tipo: 'Avaliação de resultados',     ano: 2022, cat: 'Avaliação de Políticas', resumo: 'Avaliação de resultados do programa de incentivo à reciclagem em Minas Gerais.' },
+  { titulo: 'Sistema de Monitoramento dos ODS em MG',          cliente: 'SEPLAG-MG',                  tipo: 'Planejamento',                ano: 2022, cat: 'Planejamento & Gestão',  resumo: 'Construção do sistema de monitoramento estadual dos Objetivos de Desenvolvimento Sustentável.' },
+  { titulo: 'Avaliação de Resultados do Proalminas',           cliente: 'AMIPA',                      tipo: 'Avaliação de resultados',     ano: 2021, cat: 'Avaliação de Políticas', resumo: 'Avaliação contrafactual do programa de assistência técnica para agricultores familiares.' },
+  { titulo: 'Avaliação do Voucher Habitacional',               cliente: 'COHAB Minas',                tipo: 'Avaliação de desenho',        ano: 2021, cat: 'Avaliação de Políticas', resumo: 'Análise de desenho e implementação do programa de subsídio habitacional estadual.' },
+  { titulo: 'Pesquisa de Teletrabalho no Serviço Público',     cliente: 'FJP / SEPLAG-MG',            tipo: 'Pesquisa aplicada',           ano: 2020, cat: 'Pesquisa Aplicada',      resumo: 'Survey com servidores estaduais durante a pandemia — base para a política estadual de teletrabalho.' },
+  { titulo: 'Assessoria PNAE — Alimentação Escolar',           cliente: 'CECANE/UFV',                 tipo: 'Nutrição escolar',            ano: 2017, cat: 'Políticas Sociais',      resumo: 'Assessoria técnica a municípios na execução do Programa Nacional de Alimentação Escolar.' },
 ];
 
 const PUBLICACOES = [
@@ -1145,72 +1429,75 @@ function buildTrajetoria() {
 }
 
 /* ── PROJETOS ── */
-let filterAtivo = 'todos';
+let filterCat = 'Todos';
 
-function buildProjetos(filter) {
-  filterAtivo = filter;
-  const grid = document.getElementById('proj-grid');
-  const counter = document.getElementById('proj-counter');
-  grid.innerHTML = '';
+function buildProjetos() {
+  const filtersEl = document.getElementById('proj-filters');
+  const cardsEl   = document.getElementById('proj-cards');
+  const counter   = document.getElementById('proj-list-counter');
+  const viewport  = document.getElementById('proj-viewport');
+  const thumb     = document.getElementById('proj-thumb');
 
-  document.querySelectorAll('.filter-chip').forEach(chip => {
-    chip.classList.toggle('active', chip.dataset.filter === filter);
+  // Contagem por categoria
+  const cats = ['Todos', ...Object.keys(CAT_CORES)];
+  const counts = {};
+  cats.forEach(c => counts[c] = c === 'Todos' ? PROJETOS.length : PROJETOS.filter(p => p.cat === c).length);
+
+  // Filtros
+  filtersEl.innerHTML = '';
+  cats.forEach(cat => {
+    if (counts[cat] === 0) return;
+    const btn = document.createElement('button');
+    btn.className = 'pf-chip' + (cat === filterCat ? ' active' : '');
+    btn.innerHTML = cat + `<sup class="pf-count">${counts[cat]}</sup>`;
+    btn.addEventListener('click', () => {
+      filterCat = cat;
+      buildProjetos();
+    });
+    filtersEl.appendChild(btn);
   });
 
-  const visiveis = PROJETOS.filter(p => {
-    if (filter === 'todos') return true;
-    if (filter === 'destaque') return p.destaque;
-    return p.tipo === filter || p.tipo.includes(filter);
-  });
+  // Cards
+  const visiveis = filterCat === 'Todos' ? PROJETOS : PROJETOS.filter(p => p.cat === filterCat);
+  counter.textContent = `${visiveis.length} de ${PROJETOS.length} · ↓ Role para ver todos`;
 
-  counter.textContent = `Exibindo ${visiveis.length} de ${PROJETOS.length} projetos`;
-
-  visiveis.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'proj-card';
-    card.onclick = () => openModal(p.id);
-    card.innerHTML = `
-      ${p.destaque ? '<span class="proj-card-star">★</span>' : ''}
-      <div class="proj-card-ano">${p.ano}</div>
-      <div class="proj-card-titulo">${p.titulo}</div>
-      <div class="proj-card-cliente">${p.cliente}</div>
-      <div class="proj-card-tipo">${p.tipo}</div>
-      <div class="proj-card-resumo">${p.resumo}</div>
+  cardsEl.innerHTML = '';
+  visiveis.forEach((p, i) => {
+    const cor = CAT_CORES[p.cat] || 'var(--muted)';
+    const div = document.createElement('div');
+    div.className = 'proj-item-card';
+    div.innerHTML = `
+      <div class="proj-item-num" style="color:${cor}">${String(i + 1).padStart(2, '0')}</div>
+      <div>
+        <div class="proj-item-titulo">${p.titulo}</div>
+        <div class="proj-item-cliente">para ${p.cliente}</div>
+        <div class="proj-item-ficha">
+          ${p.ano}
+          <span class="proj-item-dot" style="color:${cor}">●</span>
+          ${p.tipo}
+          <span class="proj-item-dot" style="color:${cor}">●</span>
+          ${p.cat}
+        </div>
+        <div class="proj-item-resumo">${p.resumo}</div>
+      </div>
+      <div></div>
     `;
-    grid.appendChild(card);
+    cardsEl.appendChild(div);
   });
+
+  // Scrollbar customizada
+  viewport.scrollTop = 0;
+  function updateThumb() {
+    const ratio = viewport.scrollHeight > viewport.clientHeight
+      ? viewport.scrollTop / (viewport.scrollHeight - viewport.clientHeight) : 0;
+    const thumbH = Math.max(40, (viewport.clientHeight / viewport.scrollHeight) * viewport.clientHeight);
+    const maxTop = viewport.clientHeight - thumbH;
+    thumb.style.height = thumbH + 'px';
+    thumb.style.top = (ratio * maxTop) + 'px';
+  }
+  viewport.addEventListener('scroll', updateThumb);
+  setTimeout(updateThumb, 50);
 }
-
-document.querySelectorAll('.filter-chip').forEach(chip => {
-  chip.addEventListener('click', () => buildProjetos(chip.dataset.filter));
-});
-
-/* ── MODAL ── */
-function openModal(id) {
-  const p = PROJETOS.find(x => x.id === id);
-  if (!p) return;
-  document.getElementById('modalBody').innerHTML = `
-    <div class="modal-tipo">${p.tipo}</div>
-    <div class="modal-titulo">${p.titulo}</div>
-    <div class="modal-cliente">${p.cliente} · ${p.ano}</div>
-    <div class="modal-resumo">${p.resumo}</div>
-  `;
-  document.getElementById('modalOverlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function closeModalOutside(e) {
-  if (e.target === document.getElementById('modalOverlay')) closeModal();
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
-});
 
 /* ── PUBLICAÇÕES ── */
 function buildPublicacoes() {
@@ -1253,7 +1540,7 @@ function setupNavHighlight() {
 /* ── INIT ── */
 buildMapa();
 buildTrajetoria();
-buildProjetos('todos');
+buildProjetos();
 buildPublicacoes();
 setupNavHighlight();
 </script>
