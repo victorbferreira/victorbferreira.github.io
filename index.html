@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root {
     --bg: oklch(97% 0.005 250);
@@ -235,21 +237,23 @@
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
     gap: 32px; align-items: stretch;
   }
-  .mapa-svg-wrap {
-    background: var(--moss-soft);
+  .mapa-leaflet {
     border: 1px solid var(--moss-line);
-    aspect-ratio: 4 / 3;
-    position: relative; overflow: hidden;
+    min-height: 440px;
+    position: relative;
+    z-index: 1;
   }
-  .mapa-svg-wrap svg { display: block; }
-  .mapa-label {
-    position: absolute; bottom: 14px; left: 16px;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 10px; letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: oklch(45% 0.04 165);
-    pointer-events: none;
+  .leaflet-container { font-family: Inter, sans-serif; }
+  .leaflet-popup-content-wrapper {
+    border-radius: 0 !important;
+    border: 1px solid var(--border);
+    box-shadow: none !important;
+    font-family: Inter, sans-serif;
   }
+  .leaflet-popup-tip { display: none; }
+  .mapa-popup-nome { font-weight: 500; font-size: 13px; margin-bottom: 2px; }
+  .mapa-popup-org { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: oklch(32% 0.04 165); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .mapa-popup-proj { font-size: 12px; color: oklch(50% 0.02 250); line-height: 1.5; }
   .mapa-panel {
     border: 1px solid var(--border);
     background: var(--surface);
@@ -658,7 +662,7 @@
       professor orientador no MBA USP/Esalq. Atuo entre pesquisa aplicada e prática municipal.
     </p>
     <div class="hero-stats">
-      <span>08 anos · 20 projetos · 10+ municípios · 120+ alunos · 5 publicações</span>
+      <span>08 anos · 20 projetos · 22 municípios · 120+ alunos · 6 publicações</span>
       <a href="#sobre">↓ Role para conhecer</a>
     </div>
   </div>
@@ -703,7 +707,7 @@
             <div class="stat-l">Projetos executados</div>
           </div>
           <div class="stat-box">
-            <div class="stat-n">10+</div>
+            <div class="stat-n">22</div>
             <div class="stat-l">Municípios assessorados</div>
           </div>
           <div class="stat-box">
@@ -734,23 +738,14 @@
         <div class="section-num">02</div>
         <div class="section-label">Atuação</div>
       </div>
-      <h2 class="section-title">Onde atuei — municípios e órgãos estaduais de Minas Gerais</h2>
+      <h2 class="section-title">Onde atuei — municípios e órgãos em MG, SP e MT</h2>
     </div>
     <div class="mapa-grid">
-      <div class="mapa-svg-wrap">
-        <svg viewBox="0 0 720 600" width="100%" height="100%">
-          <!-- Contorno aproximado de MG -->
-          <path d="M 100 200 Q 80 280 130 360 Q 110 460 170 510 Q 240 555 320 540 Q 410 560 490 540 Q 580 555 630 500 Q 660 430 620 360 Q 640 270 590 200 Q 540 140 460 130 Q 380 110 290 130 Q 210 115 160 150 Q 110 170 100 200 Z"
-                fill="oklch(88% 0.012 165)" stroke="oklch(75% 0.025 165)" stroke-width="1.5"/>
-          <!-- Cidades -->
-          <g id="mapa-cidades"></g>
-        </svg>
-        <div class="mapa-label">Minas Gerais · <span id="mapa-count">10</span> municípios</div>
-      </div>
+      <div id="mapa-leaflet" class="mapa-leaflet"></div>
       <div class="mapa-panel">
         <div class="mapa-panel-header">
           <span>Municípios</span>
-          <span id="mapa-panel-count">10</span>
+          <span id="mapa-panel-count">22</span>
         </div>
         <div class="mapa-panel-list" id="mapa-lista"></div>
       </div>
@@ -921,17 +916,33 @@
 
 <script>
 /* ── DADOS ── */
-const CIDADES = [
-  { id: 'bh',         x: 380, y: 380, nome: 'Belo Horizonte',  proj: 'PBH · ODS · Programa de Gestores Escolares', count: 2 },
-  { id: 'brumadinho', x: 350, y: 410, nome: 'Brumadinho',       proj: 'Plano Estratégico Municipal 2025–2028',       count: 1 },
-  { id: 'sete-lagoas',x: 360, y: 320, nome: 'Sete Lagoas',      proj: 'PCCVS SAAE · Diagnóstico Saúde · 3 projetos', count: 3 },
-  { id: 'patos',      x: 240, y: 280, nome: 'Patos de Minas',   proj: 'AMIPA · Avaliação do Proalminas',             count: 1 },
-  { id: 'vicosa',     x: 510, y: 450, nome: 'Viçosa',           proj: 'CECANE/UFV · Alimentação Escolar (PNAE)',     count: 1 },
-  { id: 'jf',         x: 580, y: 520, nome: 'Juiz de Fora',     proj: 'Consultorias estaduais',                      count: 1 },
-  { id: 'uberlandia', x: 140, y: 320, nome: 'Uberlândia',       proj: 'Avaliação do PRA · SEMAD-MG',                count: 1 },
-  { id: 'mont',       x: 320, y: 180, nome: 'Montes Claros',    proj: 'Rede Cuidar e SUAS · SEDESE-MG',             count: 1 },
-  { id: 'ouro-preto', x: 430, y: 420, nome: 'Ouro Preto',       proj: 'Política patrimonial municipal',              count: 1 },
-  { id: 'div',        x: 290, y: 460, nome: 'Divinópolis',      proj: 'Avaliação de programas sociais',              count: 1 },
+const MUNICIPIOS = [
+  // CECANE/UFV — 2017
+  { id: 'arinos',           lat: -15.91, lng: -46.10, nome: 'Arinos',               uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'caratinga',        lat: -19.79, lng: -42.15, nome: 'Caratinga',             uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'mantena',          lat: -18.78, lng: -40.98, nome: 'Mantena',               uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'riacho-machados',  lat: -16.02, lng: -43.04, nome: 'Riacho dos Machados',   uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'bocaiuva',         lat: -17.11, lng: -43.81, nome: 'Bocaiúva',              uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'cel-fabriciano',   lat: -19.52, lng: -42.63, nome: 'Coronel Fabriciano',    uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'antonio-dias',     lat: -19.65, lng: -42.87, nome: 'Antônio Dias',          uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'piedade-pn',       lat: -20.01, lng: -42.89, nome: 'Piedade de Ponte Nova', uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'joao-monlevade',   lat: -19.81, lng: -43.17, nome: 'João Monlevade',        uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  { id: 'ladainha',         lat: -17.63, lng: -41.74, nome: 'Ladainha',              uf: 'MG', org: 'CECANE/UFV',          periodo: '2017',      proj: 'PNAE – Alimentação Escolar' },
+  // FJP — 2020–2025
+  { id: 'datas',            lat: -18.44, lng: -43.66, nome: 'Datas',                 uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'Consultoria e pesquisa aplicada' },
+  { id: 'diamantina',       lat: -18.24, lng: -43.60, nome: 'Diamantina',            uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'Consultoria e pesquisa aplicada' },
+  { id: 'almenara',         lat: -16.18, lng: -40.69, nome: 'Almenara',              uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'Consultoria e pesquisa aplicada' },
+  { id: 'aracuai',          lat: -16.85, lng: -42.06, nome: 'Araçuaí',               uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'Consultoria e pesquisa aplicada' },
+  { id: 'jequitinhonha',    lat: -16.44, lng: -41.00, nome: 'Jequitinhonha',         uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'Consultoria e pesquisa aplicada' },
+  { id: 'vespasiano',       lat: -19.69, lng: -44.00, nome: 'Vespasiano',            uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'Consultoria e pesquisa aplicada' },
+  { id: 'belo-horizonte',   lat: -19.92, lng: -43.94, nome: 'Belo Horizonte',        uf: 'MG', org: 'Fundação João Pinheiro', periodo: '2020–2025', proj: 'ODS BH · Gestores Escolares PBH' },
+  // Herkenhoff & Prates — 2019
+  { id: 'varzea-grande',    lat: -15.65, lng: -56.13, nome: 'Várzea Grande',         uf: 'MT', org: 'Herkenhoff & Prates',   periodo: '2019',      proj: 'Projeto Melhoria da Educação – Fundação Itaú Social' },
+  { id: 'itapevi',          lat: -23.55, lng: -46.93, nome: 'Itapevi',               uf: 'SP', org: 'Herkenhoff & Prates',   periodo: '2019',      proj: 'Projeto Melhoria da Educação – Fundação Itaú Social' },
+  // Sophos Governança — 2025–2026
+  { id: 'sete-lagoas',      lat: -19.47, lng: -44.24, nome: 'Sete Lagoas',           uf: 'MG', org: 'Sophos Governança',     periodo: '2025–2026', proj: 'PCCVS SAAE · Diagnóstico de Custos – Saúde' },
+  { id: 'brumadinho',       lat: -20.14, lng: -44.20, nome: 'Brumadinho',            uf: 'MG', org: 'Sophos Governança',     periodo: '2025–2026', proj: 'Plano Estratégico Municipal 2025–2028' },
+  { id: 'sabara',           lat: -19.89, lng: -43.81, nome: 'Sabará',                uf: 'MG', org: 'Sophos Governança',     periodo: '2025–2026', proj: 'Consultoria em gestão municipal' },
 ];
 
 const EXPERIENCIA = [
@@ -1005,54 +1016,94 @@ const PUBLICACOES = [
 ];
 
 /* ── MAPA ── */
-let mapaActive = null;
+const ORG_CORES = {
+  'CECANE/UFV':            '#5a8a6a',
+  'Fundação João Pinheiro':'#2d5a3d',
+  'Herkenhoff & Prates':   '#c47a2a',
+  'Sophos Governança':     '#3d6b8f',
+};
 
 function buildMapa() {
-  const g = document.getElementById('mapa-cidades');
-  CIDADES.forEach(c => {
-    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    group.style.cursor = 'pointer';
-    group.addEventListener('mouseenter', () => setMapaActive(c.id));
-    group.addEventListener('mouseleave', () => setMapaActive(null));
-    group.addEventListener('click', () => setMapaActive(mapaActive === c.id ? null : c.id));
+  const map = L.map('mapa-leaflet', { zoomControl: true, scrollWheelZoom: false })
+               .setView([-18.5, -44.5], 6);
 
-    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('cx', c.x);
-    circle.setAttribute('cy', c.y);
-    circle.setAttribute('r', 5);
-    circle.setAttribute('fill', 'oklch(32% 0.04 165)');
-    circle.setAttribute('stroke', 'oklch(95% 0.01 165)');
-    circle.setAttribute('stroke-width', '1.5');
-    circle.style.transition = 'r .15s, fill .15s';
-    circle.id = 'dot-' + c.id;
-    group.appendChild(circle);
-    g.appendChild(group);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap · © CARTO',
+    subdomains: 'abcd', maxZoom: 14,
+  }).addTo(map);
+
+  const markers = {};
+
+  MUNICIPIOS.forEach(c => {
+    const cor = ORG_CORES[c.org] || '#555';
+    const icon = L.divIcon({
+      className: '',
+      html: `<div style="width:11px;height:11px;border-radius:50%;background:${cor};border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .15s"></div>`,
+      iconSize: [11, 11], iconAnchor: [6, 6],
+    });
+
+    const marker = L.marker([c.lat, c.lng], { icon })
+      .addTo(map)
+      .bindPopup(`
+        <div class="mapa-popup-nome">${c.nome}, ${c.uf}</div>
+        <div class="mapa-popup-org">${c.org} · ${c.periodo}</div>
+        <div class="mapa-popup-proj">${c.proj}</div>
+      `, { closeButton: false, offset: [0, -4] });
+
+    markers[c.id] = marker;
+
+    marker.on('mouseover', () => {
+      setMapaActive(c.id, markers, map);
+      marker.openPopup();
+    });
+    marker.on('mouseout', () => marker.closePopup());
   });
 
+  // Lista lateral
   const lista = document.getElementById('mapa-lista');
-  CIDADES.forEach(c => {
-    const div = document.createElement('div');
-    div.className = 'mapa-item';
-    div.id = 'item-' + c.id;
-    div.innerHTML = `<div class="mapa-item-nome">${c.nome}<span class="mapa-item-count">${c.count}</span></div><div class="mapa-item-proj">${c.proj}</div>`;
-    div.addEventListener('mouseenter', () => setMapaActive(c.id));
-    div.addEventListener('mouseleave', () => setMapaActive(null));
-    div.addEventListener('click', () => setMapaActive(mapaActive === c.id ? null : c.id));
-    lista.appendChild(div);
+  document.getElementById('mapa-panel-count').textContent = MUNICIPIOS.length;
+
+  // Agrupar por org
+  const grupos = {};
+  MUNICIPIOS.forEach(c => {
+    if (!grupos[c.org]) grupos[c.org] = [];
+    grupos[c.org].push(c);
+  });
+
+  Object.entries(grupos).forEach(([org, cidades]) => {
+    const header = document.createElement('div');
+    header.style.cssText = `padding:10px 20px 6px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:${ORG_CORES[org]||'#555'};border-bottom:1px solid var(--border-soft);background:var(--bg)`;
+    header.textContent = org;
+    lista.appendChild(header);
+
+    cidades.forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'mapa-item';
+      div.id = 'item-' + c.id;
+      div.innerHTML = `<div class="mapa-item-nome">${c.nome} <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">${c.uf}</span></div><div class="mapa-item-proj">${c.proj}</div>`;
+      div.addEventListener('mouseenter', () => {
+        setMapaActive(c.id, markers, map);
+        markers[c.id]?.openPopup();
+      });
+      div.addEventListener('mouseleave', () => {
+        setMapaActive(null, markers, map);
+        markers[c.id]?.closePopup();
+      });
+      div.addEventListener('click', () => map.setView([c.lat, c.lng], 9));
+      lista.appendChild(div);
+    });
   });
 }
 
-function setMapaActive(id) {
-  mapaActive = id;
-  CIDADES.forEach(c => {
-    const dot = document.getElementById('dot-' + c.id);
+function setMapaActive(id, markers, map) {
+  MUNICIPIOS.forEach(c => {
     const item = document.getElementById('item-' + c.id);
-    const isActive = c.id === id;
-    if (dot) {
-      dot.setAttribute('r', isActive ? 8 : 5);
-      dot.setAttribute('fill', isActive ? 'oklch(60% 0.12 60)' : 'oklch(32% 0.04 165)');
+    if (item) item.classList.toggle('active', c.id === id);
+    const m = markers && markers[c.id];
+    if (m) {
+      const el = m.getElement()?.querySelector('div');
+      if (el) el.style.transform = c.id === id ? 'scale(1.7)' : 'scale(1)';
     }
-    if (item) item.classList.toggle('active', isActive);
   });
 }
 
