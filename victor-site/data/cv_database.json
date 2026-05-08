@@ -1,0 +1,842 @@
+{
+  "pessoa": {
+    "nome": "Victor Barcelos Ferreira",
+    "email": "victorbarcelos@msn.com",
+    "telefone": "(31) 9-9869-5443",
+    "cidade": "Nova Lima, MG",
+    "lattes": "http://lattes.cnpq.br/1399839079425159",
+    "linkedin": "https://www.linkedin.com/in/victorbarcelos/",
+    "linktree": "linktr.ee/victorbferreira"
+  },
+  "formacao_academica": [
+    {
+      "grau": "Mestrado",
+      "curso": "Administração Pública",
+      "instituicao": "Fundação João Pinheiro",
+      "cidade": "Belo Horizonte, MG",
+      "inicio": 2018,
+      "fim": 2020,
+      "linha_pesquisa": "Estado e Políticas Públicas",
+      "bolsa": "CAPES (em parte do período)"
+    },
+    {
+      "grau": "Bacharelado",
+      "curso": "Ciências Econômicas",
+      "instituicao": "Universidade Federal de Viçosa (UFV)",
+      "cidade": "Viçosa, MG",
+      "inicio": 2013,
+      "fim": 2017,
+      "linha_pesquisa": null,
+      "bolsa": "FAPEMIG – Iniciação Científica (2015-2016); CAPES Jovens Talentos (2013-2014)"
+    }
+  ],
+  "experiencia_profissional": [
+    {
+      "cargo": "Professor de Pós-Graduação",
+      "cargo_anterior": null,
+      "organizacao": "MBA USP/Esalq – Autônomo",
+      "inicio": "Fev/2026",
+      "fim": "Atual",
+      "tipo": "Autônomo",
+      "descricao_curta": "Professor orientador do MBA em Gestão de Projetos da USP/ESALQ.",
+      "descricao_longa": "Professor orientador do MBA em Gestão de Projetos da USP/ESALQ. Piracicaba, São Paulo, Brasil.",
+      "projetos_destaque": []
+    },
+    {
+      "cargo": "Sócio e Consultor",
+      "cargo_anterior": null,
+      "organizacao": "Sophos Governança",
+      "inicio": "Mar/2025",
+      "fim": "Atual",
+      "tipo": "Tempo Integral",
+      "descricao_curta": "Sócio e consultor em empresa focada em parcerias estratégicas com o setor público.",
+      "descricao_longa": "A Sophos Governança é uma empresa focada em estabelecer parcerias estratégicas com o setor público focando em construções conjuntas para aprimoramento da gestão e desenvolvimento de políticas públicas efetivas. Belo Horizonte, MG.",
+      "projetos_destaque": [
+        "brumadinho-plano-estrategico",
+        "saae-sete-lagoas-pccvs",
+        "sete-lagoas-saude-custos"
+      ]
+    },
+    {
+      "cargo": "Assessor de Políticas Públicas",
+      "cargo_anterior": "Assessor Executivo",
+      "organizacao": "Fundação João Pinheiro – Diretoria de Políticas Públicas",
+      "inicio": "Jun/2020",
+      "fim": "Fev/2025",
+      "tipo": "CLT/Servidor",
+      "descricao_curta": "Assessoramento à Diretoria, gestão de projetos, assessoria técnica em M&A e docência na Escola de Governo.",
+      "descricao_longa": "Assessoramento à Diretoria: gerenciamento de projetos, planejamento financeiro e orçamentário, processos de compra, interlocução com coordenadores técnicos, elaboração e acompanhamento de instrumentos de monitoramento. Assessoria técnica em projetos de M&A para órgãos estaduais. Representação institucional junto a clientes e parceiros. Docência: CSAP/FJP, CEAPPGG, Programa de Desenvolvimento de Gestores Escolares (PBH). Coordenação do PPAG anual (SEPLAG-MG, 2020-2024). Gestão administrativa: patrimônio, infraestrutura, contratos.",
+      "projetos_destaque": [
+        "Avaliação do Proalminas (AMIPA, 2020-2021)",
+        "Avaliação de Desenho do Voucher Habitacional (COHAB Minas, 2021)",
+        "PCCV do SAAE Sete Lagoas (2021)",
+        "Avaliação do Programa de Desenvolvimento de Gestores Escolares (PBH, 2022)",
+        "Diagnóstico da Educação Infantil – Plano Estadual da Primeira Infância (2022)",
+        "Avaliação do Programa Bolsa Reciclagem (SEMAD-MG, 2022)",
+        "Avaliação de Impacto do Minas Comunica II (SEPLAG-MG, 2022)",
+        "Sistema de Monitoramento dos ODS em MG (SEPLAG-MG, 2022)",
+        "Avaliação do PAA (SEAPA-MG, 2023)",
+        "Avaliação de Implementação do PRA (SEMAD-MG, 2024)",
+        "Relatório ODS – Belo Horizonte (PBH, 2020)",
+        "Pesquisa de Teletrabalho – FJP e Estado de MG (2020)",
+        "PPAG anual – SEPLAG-MG (2020–2024)"
+      ]
+    },
+    {
+      "cargo": "Analista Técnico de Projetos",
+      "cargo_anterior": null,
+      "organizacao": "Herkenhoff & Prates",
+      "inicio": "Set/2019",
+      "fim": "Dez/2019",
+      "tipo": "CLT",
+      "descricao_curta": "Revisão de matrizes educacionais e coordenação de equipe de pesquisa de campo.",
+      "descricao_longa": "Análise e revisão de matrizes de rubricas educacionais para construção de instrumentos de pesquisa do Projeto Melhoria da Educação (parceria Fundação Itaú Social). Coordenação de equipe de pesquisadores de campo para coleta e validação de dados.",
+      "projetos_destaque": [
+        "Projeto Melhoria da Educação – Fundação Itaú Social"
+      ]
+    },
+    {
+      "cargo": "Assessor de Monitoramento",
+      "cargo_anterior": null,
+      "organizacao": "CECANE/UFV – Centro Colaborador em Alimentação e Nutrição do Escolar",
+      "inicio": "Fev/2017",
+      "fim": "Out/2017",
+      "tipo": "Projeto",
+      "descricao_curta": "Assessorias em alimentação escolar em 9 municípios de MG.",
+      "descricao_longa": "Assessorias em municípios de MG para aprimorar a gestão local do PNAE. Diagnóstico situacional, elaboração de Plano de Ação, pesquisa de campo com atores da alimentação escolar, capacitação sobre o PNAE, criação de banco de dados das assessorias.",
+      "projetos_destaque": [
+        "PNAE – 9 municípios de MG"
+      ]
+    },
+    {
+      "cargo": "Estagiário",
+      "cargo_anterior": null,
+      "organizacao": "APOV – Associação Assistencial e Promocional da Pastoral da Oração de Viçosa",
+      "inicio": "Jul/2016",
+      "fim": "Out/2016",
+      "tipo": "Estágio",
+      "descricao_curta": "Elaboração de projetos sociais e avaliação de impacto.",
+      "descricao_longa": "Elaboração e supervisão de projetos de captação de recursos junto a entidades de fomento. Elaboração de plano de avaliação de impacto. Resultado: projeto aprovado em edital da Fundação Itaú Social (~R$ 280.000).",
+      "projetos_destaque": [
+        "Projeto aprovado – Fundação Itaú Social (R$ 280 mil)"
+      ]
+    }
+  ],
+  "docencia": [
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Graduação em Administração Pública (CSAP)",
+      "disciplina": "Projeto Aplicado III",
+      "turmas": 3,
+      "papel": "Professor"
+    },
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Graduação em Administração Pública (CSAP)",
+      "disciplina": "Disciplina optativa",
+      "turmas": 1,
+      "papel": "Professor"
+    },
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Graduação em Administração Pública (CSAP)",
+      "disciplina": "Orientação de monografia",
+      "turmas": 2,
+      "papel": "Orientador"
+    },
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Graduação em Administração Pública (CSAP)",
+      "disciplina": "Banca de monografia",
+      "turmas": 4,
+      "papel": "Avaliador"
+    },
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Especialização em Adm. Pública, Planejamento e Gestão Governamental (CEAPPGG)",
+      "disciplina": "Ferramentas e Práticas de M&A de Programas Públicos",
+      "turmas": 3,
+      "papel": "Professor"
+    },
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Especialização em Adm. Pública, Planejamento e Gestão Governamental (CEAPPGG)",
+      "disciplina": "Banca de monografia",
+      "turmas": 3,
+      "papel": "Avaliador"
+    },
+    {
+      "instituicao": "Escola de Governo Paulo Neves de Carvalho (FJP)",
+      "curso": "Especialização em Monitoramento e Avaliação",
+      "disciplina": "Banca e orientação de monografia",
+      "turmas": 2,
+      "papel": "Avaliador/Orientador"
+    },
+    {
+      "instituicao": "Fundação João Pinheiro",
+      "curso": "Programa de Desenvolvimento de Gestores (FJP)",
+      "disciplina": "Facilitação",
+      "turmas": null,
+      "papel": "Facilitador"
+    },
+    {
+      "instituicao": "Prefeitura de Belo Horizonte",
+      "curso": "Programa de Desenvolvimento de Gestores Escolares (PBH)",
+      "disciplina": "Oficina de M&A e Gestão da Informação; Módulo Visão Sistêmica e Institucional",
+      "turmas": null,
+      "papel": "Professor/Facilitador"
+    },
+    {
+      "instituicao": "Guarda Civil Municipal de Uberaba",
+      "curso": "Curso de Formação da Guarda Municipal (2019)",
+      "disciplina": "A Guarda Municipal e a Comunidade",
+      "turmas": 1,
+      "papel": "Professor",
+      "obs": "80 discentes, 60 horas"
+    }
+  ],
+  "publicacoes": [
+    {
+      "ano": 2023,
+      "titulo": "Avaliação dos resultados do Programa Mineiro de Incentivo à Cultura do Algodão (Proalminas)",
+      "periodico": "Revista Brasileira de Avaliação",
+      "coautores": [
+        "João Batista Rezende"
+      ],
+      "tipo": "Artigo"
+    },
+    {
+      "ano": 2022,
+      "titulo": "A distribuição de insumos escolares e seu impacto sobre a desigualdade educacional: uma análise do efeito professor sobre o 9º ano da rede pública de Minas Gerais",
+      "periodico": "INTERFACE (Natal)",
+      "coautores": [
+        "Luisa Sousa",
+        "Bruno Costa",
+        "Reinaldo Morais"
+      ],
+      "tipo": "Artigo"
+    },
+    {
+      "ano": 2021,
+      "titulo": "Capacidades estatais no Programa Nacional de Alimentação Escolar (PNAE) em MG: uma análise comparada da implementação nas redes estadual e municipal",
+      "periodico": "NAU – Revista Eletrônica da Residência Social",
+      "coautores": [
+        "Ricardo Carneiro",
+        "Lauro Vicari"
+      ],
+      "tipo": "Artigo"
+    },
+    {
+      "ano": 2021,
+      "titulo": "Nadando contra a Corrente: Equidade e Desempenho nas Redes Municipais de Ensino Fundamental em Minas Gerais",
+      "periodico": "Revista Brasileira de Políticas Públicas e Internacionais",
+      "coautores": [
+        "Bruno Diniz Costa"
+      ],
+      "tipo": "Artigo"
+    },
+    {
+      "ano": 2019,
+      "titulo": "O impacto da distorção idade-série sobre a criminalidade nos municípios de Minas Gerais",
+      "periodico": "Revista Brasileira de Segurança Pública",
+      "coautores": [
+        "Evandro Camargos Teixeira"
+      ],
+      "tipo": "Artigo"
+    },
+    {
+      "ano": 2019,
+      "titulo": "Democracia deliberativa, capital social e coprodução de serviços públicos: potenciais e desafios na construção da sinergia Estado-sociedade",
+      "periodico": "NAU – Revista Eletrônica da Residência Social",
+      "coautores": [
+        "Bruno Diniz Costa",
+        "Flávia Brasil"
+      ],
+      "tipo": "Artigo"
+    }
+  ],
+  "cursos": [
+    {
+      "ano": 2024,
+      "titulo": "Gestor de Projetos e Programas de PPP no Brasil",
+      "instituicao": "Banco Interamericano de Desenvolvimento (BID)",
+      "carga_horaria": null,
+      "tipo": "Licença"
+    },
+    {
+      "ano": 2022,
+      "titulo": "Impact Measurement: Applying the Principles of Social Value and SROI",
+      "instituicao": "Efiko Academy – Social Value International",
+      "carga_horaria": null,
+      "tipo": "Licença"
+    },
+    {
+      "ano": 2021,
+      "titulo": "Treinamento em Gestão de Riscos",
+      "instituicao": "Controladoria-Geral do Estado de Minas Gerais",
+      "carga_horaria": 10,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2020,
+      "titulo": "Relações Governamentais e Advocacy e novas tecnologias",
+      "instituicao": "Instituto de Tecnologia e Sociedade do Rio (ITSRio)",
+      "carga_horaria": 17,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2019,
+      "titulo": "Burocracia e Implementação de Políticas Públicas",
+      "instituicao": "Projeto Democracia Participativa",
+      "carga_horaria": 15,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2017,
+      "titulo": "Evaluación de Impacto de Programas Sociales",
+      "instituicao": "Massachusetts Institute of Technology (MIT)",
+      "carga_horaria": null,
+      "tipo": "Licença"
+    },
+    {
+      "ano": 2017,
+      "titulo": "Avaliação Econômica de Projetos Sociais",
+      "instituicao": "Fundação Itaú Social",
+      "carga_horaria": 34,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2017,
+      "titulo": "Elaboração de Projetos Sociais",
+      "instituicao": "CECAPS – UFMG",
+      "carga_horaria": 90,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2017,
+      "titulo": "Introdução ao Gerenciamento de Projetos",
+      "instituicao": "Escola Nacional de Administração Pública (ENAP)",
+      "carga_horaria": 20,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2016,
+      "titulo": "MS Project",
+      "instituicao": "Universidade Federal de Viçosa",
+      "carga_horaria": 8,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2016,
+      "titulo": "Design Thinking",
+      "instituicao": "Universidade Federal de Viçosa",
+      "carga_horaria": 8,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2016,
+      "titulo": "Metodologias Ativas na Prática Docente",
+      "instituicao": "Universidade Federal de Viçosa",
+      "carga_horaria": 30,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2016,
+      "titulo": "Elementos para o Estudo de Políticas Públicas",
+      "instituicao": "Universidade Federal de Viçosa",
+      "carga_horaria": 4,
+      "tipo": "Curso"
+    },
+    {
+      "ano": 2016,
+      "titulo": "Análise de dados para estudo de escolas/redes",
+      "instituicao": "Universidade Estadual de Montes Claros",
+      "carga_horaria": 4,
+      "tipo": "Curso"
+    }
+  ],
+  "experiencias_complementares": [
+    {
+      "tipo": "Conselho",
+      "descricao": "Membro do Conselho Fiscal da Rede Brasileira de Monitoramento e Avaliação",
+      "periodo": "2021–2023"
+    },
+    {
+      "tipo": "Voluntariado Internacional",
+      "descricao": "Voluntário na iniciativa P2p+ – Peer to peer advisory sessions in evaluation (Lusofonia)",
+      "periodo": "2021+"
+    },
+    {
+      "tipo": "Liderança Acadêmica",
+      "descricao": "Co-fundador e Presidente da Liga Acadêmica Newton Paulo Bueno de Economia e Comportamento (LANP-UFV/MG)",
+      "periodo": "2015–2016",
+      "obs": "6 projetos de pesquisa, 1 extensão, 24 membros"
+    },
+    {
+      "tipo": "Liderança Acadêmica",
+      "descricao": "Diretor de Projetos do Centro Acadêmico de Economia (CAECO-UFV)",
+      "periodo": "2013–2015",
+      "obs": "15 eventos, 255h, público de 830 pessoas"
+    },
+    {
+      "tipo": "Pesquisa",
+      "descricao": "Membro do Grupo de Estudos em Neurociência e Educação (GENE/UFV)",
+      "periodo": "2016"
+    },
+    {
+      "tipo": "Voluntariado",
+      "descricao": "Voluntário no Projeto Sementes do Amanhã – Casa de Promoção e Caminho Bezerra de Menezes",
+      "periodo": "2014–2015"
+    },
+    {
+      "tipo": "Voluntariado",
+      "descricao": "Voluntário no Grupo de Educação e Interpretação Ambiental da Mata do Paraíso (GEIA-Mata)",
+      "periodo": "Set/2015 – Jun/2016"
+    },
+    {
+      "tipo": "Reconhecimento",
+      "descricao": "Jovem selecionado para o encontro Economia de Francisco (Vaticano + Oxford University)",
+      "periodo": "2020"
+    },
+    {
+      "tipo": "Consultoria",
+      "descricao": "Assessoramento em processo de aceleração da SerSolidário (AngloGold Ashanti – Nova Lima)",
+      "periodo": "2022+"
+    }
+  ],
+  "habilidades": {
+    "analise_dados": [
+      "Excel (Avançado, VBA e Macros)",
+      "R",
+      "Stata",
+      "SPSS",
+      "QGis"
+    ],
+    "visualizacao": [
+      "Power BI",
+      "Prezi"
+    ],
+    "gestao_projetos": [
+      "Trello",
+      "Asana",
+      "MS Project"
+    ],
+    "pesquisa": [
+      "Google Forms",
+      "LimeSurvey"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Português",
+        "nivel": "Fluente"
+      },
+      {
+        "idioma": "Inglês",
+        "nivel": "Leitura avançada, comunicação avançada"
+      },
+      {
+        "idioma": "Espanhol",
+        "nivel": "Leitura avançada, comunicação básica"
+      }
+    ]
+  },
+  "projetos_pesquisa": [
+    {
+      "titulo": "Análise do trade-off entre fluxo e desempenho na evolução do Ideb dos estados brasileiros",
+      "vinculo": "FJP – Núcleo de Educação e Políticas Públicas",
+      "periodo": "2018+"
+    },
+    {
+      "titulo": "Retornos não cognitivos da educação superior: análise experimental do altruísmo como efeito de ações afirmativas",
+      "vinculo": "LANP-UFV/MG",
+      "periodo": "2016–2017"
+    },
+    {
+      "titulo": "A repetência escolar afeta a criminalidade futura nos municípios de Minas Gerais?",
+      "vinculo": "FAPEMIG – Iniciação Científica",
+      "periodo": "2015–2016"
+    },
+    {
+      "titulo": "Análise da evolução recente dos aluguéis residenciais em Viçosa",
+      "vinculo": "CAPES – Programa Jovens Talentos",
+      "periodo": "2013–2014"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "cohab-voucher-habitacional",
+      "titulo": "Avaliação de Desenho – Programa Voucher Habitacional",
+      "cliente": "COHAB Minas",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2021,
+      "tipo": "Avaliação de Desenho",
+      "tema": "Habitação",
+      "descricao": "Avaliação de desenho de proposta de Programa de Voucher Habitacional encomendado pela COHAB Minas, desenvolvida em três etapas: benchmarking de programas similares, análise do desenho proposto e análise custo-benefício.",
+      "atribuicoes": [
+        "Desenho metodológico do benchmarking",
+        "Pesquisa de artigos sobre impactos de políticas de voucher habitacional",
+        "Desenho metodológico da análise de desenho",
+        "Construção do Marco Lógico do programa proposto",
+        "Desenho metodológico da análise custo-benefício e modelagem"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "proalminas-avaliacao",
+      "titulo": "Avaliação de Resultados do Proalminas",
+      "cliente": "AMIPA – Associação Mineira dos Produtores de Algodão",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2021,
+      "tipo": "Avaliação de Resultados",
+      "tema": "Agricultura / Desenvolvimento Econômico",
+      "descricao": "Avaliação dos resultados do Programa Mineiro de Incentivo à Cultura do Algodão (Proalminas) entre 2003 e 2019, incluindo diagnóstico da indústria têxtil mineira.",
+      "atribuicoes": [
+        "Articulação institucional junto ao cliente e stakeholders",
+        "Coordenação técnica do Diagnóstico da Indústria Têxtil",
+        "Revisão final do relatório de diagnóstico e elaboração de Sumário Executivo",
+        "Definição da estratégia metodológica do Relatório Final",
+        "Revisão do Relatório Final e elaboração de Sumário Executivo",
+        "Elaboração da apresentação final para o cliente"
+      ],
+      "resultado": "Artigo publicado na Revista Brasileira de Avaliação (2023) em coautoria com João Batista Rezende",
+      "destaque": true
+    },
+    {
+      "id": "ods-belo-horizonte",
+      "titulo": "Relatório de Acompanhamento dos ODS em Belo Horizonte",
+      "cliente": "Observatório do Desenvolvimento do Milênio – Prefeitura de BH",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2020,
+      "tipo": "Relatório de Monitoramento",
+      "tema": "Desenvolvimento Sustentável / ODS",
+      "descricao": "Monitoramento periódico dos Objetivos de Desenvolvimento Sustentável (ODS) em Belo Horizonte. A FJP participou do ciclo de 2020, colaborando com cinco capítulos do relatório.",
+      "atribuicoes": [
+        "Articulação institucional junto ao Observatório",
+        "Participação em reuniões para definição de agenda e escopo",
+        "Coordenação técnica dos cinco capítulos da FJP",
+        "Revisão final dos capítulos",
+        "Co-autoria no Capítulo do ODS1 – Erradicação da pobreza"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "teletrabalho-fjp-seplag",
+      "titulo": "Pesquisa de Teletrabalho no Serviço Público",
+      "cliente": "Fundação João Pinheiro / SEPLAG-MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2020,
+      "tipo": "Pesquisa Aplicada",
+      "tema": "Gestão de Pessoas / Serviço Público",
+      "descricao": "Pesquisas sobre teletrabalho no contexto da pandemia de Covid-19. Primeiro uma pesquisa piloto com servidores da FJP e, posteriormente, pesquisa ampliada para todo o Estado de Minas Gerais, com 32 mil respondentes.",
+      "atribuicoes": [
+        "Tratamento da base de dados dos respondentes",
+        "Análise dos determinantes da motivação e produtividade dos servidores",
+        "Redação e revisão do Relatório Final",
+        "Elaboração do Sumário Executivo"
+      ],
+      "resultado": "32 mil respondentes na pesquisa estadual",
+      "destaque": true
+    },
+    {
+      "id": "saae-reforma-administrativa",
+      "titulo": "Reforma Administrativa e PCCV do SAAE Sete Lagoas",
+      "cliente": "SAAE – Serviço Autônomo de Água e Esgoto de Sete Lagoas",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2021,
+      "tipo": "Consultoria Organizacional",
+      "tema": "Gestão Pública / Reforma Administrativa",
+      "descricao": "Consultoria para elaboração de proposta de reforma administrativa e novo Plano de Cargos, Carreiras e Vencimentos (PCCV) para a autarquia.",
+      "atribuicoes": [
+        "Elaboração de relatório de Status Report para stakeholders externos",
+        "Elaboração de boletim informativo para comunicação com servidores do SAAE"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "ma-governo-estadual-mg",
+      "titulo": "Monitoramento e Avaliação no Governo Estadual de MG (NIMA/SIMAPP)",
+      "cliente": "SEPLAG-MG / Governo do Estado de Minas Gerais",
+      "organizacao_executora": "Fundação João Pinheiro – NIMA",
+      "ano": 2021,
+      "tipo": "Assessoria Governamental / Institucionalização",
+      "tema": "Monitoramento e Avaliação / Governança",
+      "descricao": "Ações para disseminar e institucionalizar o monitoramento e avaliação de políticas públicas no Estado de MG. O NIMA (Núcleo Integrado de M&A da FJP) capitaneou o processo, resultando na aprovação do SIMAPP (Sistema Mineiro de Avaliação de Políticas Públicas) e no assessoramento aos ciclos do PPAG.",
+      "atribuicoes": [
+        "Participação nas atividades do NIMA",
+        "Coordenação e monitoramento do Planejamento Estratégico do NIMA",
+        "Participação na redação do Decreto de instituição do SIMAPP",
+        "Elaboração de survey sobre a percepção dos gestores sobre o PPAG",
+        "Elaboração de oficinas para gestores sobre monitoramento no PPAG"
+      ],
+      "resultado": "Aprovação do SIMAPP – Sistema Mineiro de Avaliação de Políticas Públicas",
+      "destaque": true
+    },
+    {
+      "id": "gestores-escolares-pbh",
+      "titulo": "Avaliação e Desenvolvimento de Gestores Escolares – PBH",
+      "cliente": "Prefeitura de Belo Horizonte",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2022,
+      "tipo": "Avaliação de Resultados / Programa de Formação",
+      "tema": "Educação / Desenvolvimento de Lideranças",
+      "descricao": "Avaliação dos resultados do Programa de Desenvolvimento de Gestores Escolares da Prefeitura de Belo Horizonte e coordenação da implementação do programa formativo.",
+      "atribuicoes": [
+        "Avaliação de resultados do programa formativo",
+        "Coordenação do eixo de acompanhamento dos planos de trabalho",
+        "Facilitação das oficinas de Monitoramento, Avaliação e Gestão da Informação",
+        "Facilitação do Módulo de Visão Sistêmica e Institucional"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "bolsa-reciclagem",
+      "titulo": "Avaliação de Resultados do Programa Bolsa Reciclagem",
+      "cliente": "SEMAD – Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2022,
+      "tipo": "Avaliação de Resultados",
+      "tema": "Meio Ambiente / Economia Circular",
+      "descricao": "Avaliação dos resultados do Programa Bolsa Reciclagem do Estado de Minas Gerais.",
+      "atribuicoes": [
+        "Coordenação da avaliação"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "minas-comunica-ii",
+      "titulo": "Avaliação de Impacto do Programa Minas Comunica II",
+      "cliente": "SEPLAG – Secretaria de Estado de Planejamento e Gestão de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2022,
+      "tipo": "Avaliação de Impacto",
+      "tema": "Comunicação / Políticas Públicas",
+      "descricao": "Avaliação de impacto do Programa Minas Comunica II.",
+      "atribuicoes": [
+        "Pesquisador"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "ods-monitoramento-mg",
+      "titulo": "Sistema de Monitoramento dos ODS em Minas Gerais",
+      "cliente": "SEPLAG – Secretaria de Estado de Planejamento e Gestão de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2022,
+      "tipo": "Assessoria / Arquitetura de Sistema",
+      "tema": "Desenvolvimento Sustentável / ODS / Governança",
+      "descricao": "Proposta de implantação de sistema de monitoramento dos Objetivos de Desenvolvimento Sustentável no Estado de Minas Gerais.",
+      "atribuicoes": [
+        "Coordenação da proposta"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "paa-avaliacao",
+      "titulo": "Avaliação de Resultados do Programa de Aquisição de Alimentos (PAA)",
+      "cliente": "SEAPA – Secretaria de Estado de Agricultura, Pecuária e Abastecimento de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2023,
+      "tipo": "Avaliação de Resultados",
+      "tema": "Agricultura Familiar / Segurança Alimentar",
+      "descricao": "Avaliação dos resultados do Programa de Aquisição de Alimentos no Estado de Minas Gerais.",
+      "atribuicoes": [
+        "Coordenação da avaliação"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "pra-avaliacao-implementacao",
+      "titulo": "Avaliação de Implementação do Programa de Regularização Ambiental (PRA)",
+      "cliente": "SEMAD – Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2024,
+      "tipo": "Avaliação de Implementação",
+      "tema": "Meio Ambiente / Regularização Fundiária",
+      "descricao": "Avaliação da implementação do Programa de Regularização Ambiental do Estado de Minas Gerais.",
+      "atribuicoes": [
+        "Coordenação da avaliação"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "rede-cuidar-suas",
+      "titulo": "Avaliação de Resultados do Programa Rede Cuidar – Aprimoramento da Rede Socioassistencial do SUAS",
+      "cliente": "Sedese – Secretaria de Estado de Desenvolvimento Social de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2024,
+      "tipo": "Avaliação de Resultados",
+      "tema": "Assistência Social / SUAS",
+      "descricao": "Avaliação dos resultados do Programa Rede Cuidar, voltado ao aprimoramento da rede socioassistencial do SUAS em Minas Gerais.",
+      "atribuicoes": [
+        "Pesquisador"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "ppag-ciclos-anuais",
+      "titulo": "Assessoramento ao Plano Plurianual de Ação Governamental (PPAG)",
+      "cliente": "SEPLAG – Secretaria de Estado de Planejamento e Gestão de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": "2020–2024",
+      "tipo": "Assessoria Continuada / Planejamento Governamental",
+      "tema": "Planejamento Governamental",
+      "descricao": "Coordenação dos ciclos anuais de assessoramento à elaboração e revisão do Plano Plurianual de Ação Governamental do Estado de Minas Gerais, em parceria com a SEPLAG-MG.",
+      "atribuicoes": [
+        "Coordenação do ciclo anual de assessoramento",
+        "Elaboração de survey sobre percepção dos gestores sobre o PPAG",
+        "Elaboração de oficinas para gestores sobre monitoramento no PPAG"
+      ],
+      "resultado": "5 ciclos anuais coordenados (2020–2024)",
+      "destaque": true
+    },
+    {
+      "id": "herkenhoff-projeto-melhoria-educacao",
+      "titulo": "Projeto Melhoria da Educação – Matriz de Competências Municipais",
+      "cliente": "Fundação Itaú Social",
+      "organizacao_executora": "Herkenhoff & Prates",
+      "ano": 2019,
+      "tipo": "Consultoria Educacional",
+      "tema": "Educação / Avaliação",
+      "descricao": "Construção de matriz de competências para medir a qualidade da educação pública executada pelos entes municipais, com validação por pesquisa de campo.",
+      "atribuicoes": [
+        "Análise técnica da matriz de competências",
+        "Construção de surveys para validação da matriz",
+        "Trabalho de campo para coleta de dados",
+        "Coordenação técnica do trabalho de campo"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "cecane-pnae",
+      "titulo": "Assessorias em Alimentação Escolar – PNAE",
+      "cliente": "FNDE – Fundo Nacional de Desenvolvimento da Educação",
+      "organizacao_executora": "CECANE/UFV",
+      "ano": "2017",
+      "tipo": "Assessoria Técnica / Monitoramento",
+      "tema": "Alimentação Escolar / Políticas Educacionais",
+      "descricao": "Assessorias para aprimorar a gestão local do PNAE em municípios de Minas Gerais, com diagnóstico situacional, planos de ação e capacitações.",
+      "atribuicoes": [
+        "Mobilização de atores locais envolvidos com o programa",
+        "Análise documental e entrevistas com gestores e técnicos",
+        "Visitas a escolas para diagnóstico da implementação",
+        "Elaboração de planos de ação municipais",
+        "Capacitações para aprimoramento da execução do PNAE"
+      ],
+      "resultado": "9 municípios assessorados; capacitações para atores de mais de 45 municípios",
+      "destaque": true
+    },
+    {
+      "id": "educacao-infantil-plano-estadual",
+      "titulo": "Diagnóstico da Educação Infantil para o Plano Estadual da Primeira Infância",
+      "cliente": "SEE-MG – Secretaria de Estado de Educação de MG",
+      "organizacao_executora": "Fundação João Pinheiro",
+      "ano": 2022,
+      "tipo": "Diagnóstico / Pesquisa Aplicada",
+      "tema": "Educação Infantil / Primeira Infância",
+      "descricao": "Diagnóstico da situação da educação infantil no estado como subsídio para o Plano Estadual da Primeira Infância.",
+      "atribuicoes": [
+        "Pesquisador"
+      ],
+      "resultado": null,
+      "destaque": false
+    },
+    {
+      "id": "brumadinho-plano-estrategico",
+      "titulo": "Plano Estratégico Municipal Brumadinho 2025–2028",
+      "cliente": "Prefeitura Municipal de Brumadinho",
+      "organizacao_executora": "Sophos Governança / Valor Público",
+      "ano_inicio": 2025,
+      "ano_fim": 2026,
+      "tipo": "Consultoria em Planejamento Estratégico",
+      "tema": "Planejamento e Gestão Municipal",
+      "descricao": "Elaboração do Plano Estratégico 'Brumas do Amanhã' para a gestão municipal 2025–2028, abrangendo diagnóstico organizacional, definição de Missão/Visão/Valores, estruturação de 159 metas distribuídas em eixos temáticos, elaboração do Plano Plurianual (PPA) e da Lei de Diretrizes Orçamentárias (LDO) 2026, e criação de sistema de governança e monitoramento.",
+      "atribuicoes": [
+        "Coordenação de reuniões de kickoff e entrevistas com Prefeito e Secretários para diagnóstico e levantamento de prioridades",
+        "Facilitação de oficinas participativas para formulação de Missão, Visão e Valores da administração municipal",
+        "Elaboração de mais de 155 Termos de Abertura de Projeto (TAPs) com metas, indicadores e planos de ação detalhados",
+        "Construção de indicadores macroorçamentários e dashboard interativo de monitoramento fiscal",
+        "Elaboração integral do PPA 2026–2029 (projeto de lei + anexos) e do substitutivo em resposta ao Ministério Público",
+        "Estruturação do Comitê de Governança Estratégica (CGE) e elaboração do decreto de institucionalização",
+        "Capacitação de servidores e assessores estratégicos em gestão pública, resultados e boas práticas de governança",
+        "Adesão ao Programa Cidades Sustentáveis e vinculação dos projetos aos ODS",
+        "Apoio técnico à Junta Orçamentária e Financeira (JOF) e participação em audiências públicas"
+      ],
+      "resultado": "Lançamento oficial do Plano Estratégico 'Brumas do Amanhã' em dezembro de 2025, com 159 metas organizadas em fichas detalhadas, PPA 2026–2029 aprovado e Comitê de Governança Estratégica institucionalizado por decreto municipal. Integração entre planejamento estratégico, instrumentos orçamentários (PPA/LDO/LOA) e rotinas operacionais das secretarias.",
+      "destaque": true
+    },
+    {
+      "id": "saae-sete-lagoas-pccvs",
+      "titulo": "Adequação Jurídica do PCCVS — SAAE Sete Lagoas",
+      "cliente": "SAAE — Serviço Autônomo de Água e Esgoto de Sete Lagoas",
+      "organizacao_executora": "Sophos Governança",
+      "ano_inicio": 2025,
+      "ano_fim": 2026,
+      "tipo": "Assessoria Jurídica e Gestão de Pessoas",
+      "tema": "Recursos Humanos / Gestão de Pessoal",
+      "descricao": "Revisão e adequação jurídica da minuta do Plano de Cargos, Carreiras, Vencimentos e Salários (PCCVS) elaborada pela Fundação João Pinheiro, com foco na resolução de questões vinculadas à Ação Civil Pública ajuizada pelo Ministério Público de Minas Gerais em face da autarquia.",
+      "atribuicoes": [
+        "Elaboração de parecer jurídico completo com identificação e classificação de 10 pontos críticos da minuta (urgência, alta e média prioridade)",
+        "Produção de minuta grifada com comentários e propostas de redação substitutiva para todos os trechos problemáticos",
+        "Benchmark com a Lei Municipal 9.599/2023 (Câmara de Sete Lagoas) para calibragem das sugestões",
+        "Pesquisa legislativa de LC 82/2003, LC 79/2003, LC 84/2003, LC 144 e LC 191/2016, além de jurisprudência do TJMG",
+        "Sistematização de reuniões com a direção para consolidação de diretrizes de correção (progressão horizontal, gratificações, jornada 12x36)",
+        "Redação técnica de artigos sobre jornada 12x36 para Operadores e Ajudantes de Saneamento (ETA/ETE)",
+        "Consolidação do Relatório de Alterações com todas as inclusões, exclusões e atualizações da minuta final",
+        "Atualização da planilha de cargos com inclusão de cargo ambiental, atualização de mais de 20 denominações e criação de nível remuneratório intermediário",
+        "Compatibilização dos Anexos I e II da minuta com a planilha revisada de cargos e quantitativos"
+      ],
+      "resultado": "Entrega de minuta consolidada do PCCVS com todos os pontos críticos resolvidos, atendendo às exigências da ACP do Ministério Público. Planilha de cargos atualizada com mais de 20 denominações revisadas, DADs corrigidos em todas as gerências e novo nível remuneratório intermediário criado para cargos de fiscalização.",
+      "destaque": true
+    },
+    {
+      "id": "sete-lagoas-saude-custos",
+      "titulo": "Diagnóstico de Custos — Secretaria Municipal de Saúde de Sete Lagoas",
+      "cliente": "Prefeitura Municipal de Sete Lagoas — Secretaria Municipal de Saúde",
+      "organizacao_executora": "Sophos Governança",
+      "ano_inicio": 2026,
+      "ano_fim": 2026,
+      "tipo": "Consultoria em Finanças Públicas / Saúde",
+      "tema": "Saúde Pública / Eficiência do Gasto",
+      "descricao": "Diagnóstico abrangente dos custos da Secretaria Municipal de Saúde de Sete Lagoas, com base em dados primários do município (SICOM, folha de pessoal, contratos, CNES, DATASUS), visando identificar ineficiências, red flags e oportunidades de economia sem comprometer a oferta de serviços à população. Orçamento total analisado: R$ 594 milhões empenhados em 2025.",
+      "atribuicoes": [
+        "Análise da folha de pessoal (3.260 servidores, R$ 20,6 mi/mês): identificação de outliers salariais via Z-score, acúmulo de matrículas e rubricas sem base legal",
+        "Análise do orçamento SICOM 2025 (R$ 594 mi): mapeamento de programas, ações e maiores credores por categoria",
+        "Auditoria de contratos ativos: classificação de 3.947 contratos, identificação de 156 contratos secundários (R$ 16 mi) com economia potencial de R$ 9,8 mi",
+        "Análise comparativa Hospital Municipal (HM) vs. HNSG: custo ao caixa municipal, captação de recursos federais e estaduais, indicadores de produção assistencial",
+        "Análise de produção assistencial via DATASUS (AIH jan-fev/2024): taxas de cesáreas, perfil ambulatorial e capacidade instalada",
+        "Mapeamento de 285 registros de medicamentos no SICOM (R$ 12,7 mi): análise de fragmentação de fornecedores e proposta de Ata de Registro de Preços",
+        "Levantamento do marco jurídico: LC 183/2015, LC 192/2016 e LC 285; identificação de rubricas sem base legal (0153 e 0317)",
+        "Elaboração de plano de ações de curto prazo com economia potencial de R$ 7–20 milhões"
+      ],
+      "resultado": "Identificação de economia potencial de R$ 7–20 milhões com ações de curto prazo (30 dias): auditoria de rubricas sem base legal (R$ 1,6–2,6 mi/ano), adesão à Ata de Registro de Preços para medicamentos (R$ 1–2 mi/ano), negociação do rateio do SAMU regional (R$ 2–4 mi), e renegociação de contratos secundários (R$ 9,8 mi). Identificação de red flag no contrato 188/2025 (R$ 5 mi) com possível fracionamento de licitação.",
+      "destaque": true
+    }
+  ],
+  "pesquisas_fapemig": [
+    {
+      "titulo": "Construindo capacidades e expandindo fronteiras em pesquisa na FJP",
+      "financiador": "FAPEMIG",
+      "organizacao": "Fundação João Pinheiro",
+      "status": "Concluída",
+      "ano": 2024
+    },
+    {
+      "titulo": "Percepção dos professores do município de Belo Horizonte sobre o impacto das aulas remotas emergenciais impostas pela pandemia da Covid-19",
+      "financiador": "FAPEMIG",
+      "organizacao": "Fundação João Pinheiro",
+      "status": "Concluída",
+      "ano": 2023
+    }
+  ]
+}
