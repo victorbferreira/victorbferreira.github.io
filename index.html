@@ -1019,11 +1019,11 @@
       Ferreira<span class="dot">.</span>
     </h1>
     <p class="hero-tagline">
-      Economista e consultor em políticas públicas. Sócio da Sophos Governança,
-      professor orientador no MBA USP/Esalq. Atuo entre pesquisa aplicada e prática municipal.
+      Economista e gestor de projetos públicos. Assessor de Projetos do Gabinete do
+      Prefeito de Belo Horizonte, sócio da Sophos Governança e professor orientador no MBA USP/Esalq.
     </p>
     <div class="hero-stats">
-      <span>08 anos · 20 projetos · 21 municípios · 120+ alunos · 6 publicações</span>
+      <span>08 anos · 21 projetos · 21 municípios · 120+ alunos · 6 publicações</span>
       <a href="#sobre">↓ Role para conhecer</a>
     </div>
   </div>
@@ -1044,6 +1044,7 @@
         <p>Formado em Ciências Econômicas pela UFV e Mestre em Administração Pública pela Fundação João Pinheiro, iniciei minha trajetória profissional em pesquisa educacional e migrei para políticas públicas ao ingressar na própria FJP, onde trabalhei por quase cinco anos na Diretoria de Políticas Públicas.</p>
         <p>Na FJP coordenei e executei mais de 14 projetos de pesquisa aplicada e consultoria para órgãos estaduais e municipais de Minas Gerais. Os principais produtos eram avaliações de programas governamentais e implantação de sistemas de monitoramento.</p>
         <p>Em 2025 me tornei sócio da Sophos Governança, empresa focada em parcerias estratégicas com o setor público para planejamento, finanças públicas e gestão de pessoal. Sou também professor orientador no MBA em Gestão de Projetos da USP/Esalq.</p>
+        <p>Desde junho de 2026 integro o Gabinete do Prefeito de Belo Horizonte como Assessor de Projetos, conduzindo o monitoramento da carteira de projetos do Governo Municipal.</p>
         <div class="formacao-list">
           <div class="formacao-item">
             <div class="formacao-titulo">Mestrado em Administração Pública</div>
@@ -1064,7 +1065,7 @@
             <div class="stat-l">Anos de experiência</div>
           </div>
           <div class="stat-box">
-            <div class="stat-n">20</div>
+            <div class="stat-n">21</div>
             <div class="stat-l">Projetos executados</div>
           </div>
           <div class="stat-box">
@@ -1141,7 +1142,7 @@
   <!-- PARTE 1: Case study -->
   <div class="cs-top cs-wrap">
     <div class="cs-eyebrow">04 — Projetos</div>
-    <h2 class="cs-main-title">Em foco. Um caso desenvolvido + onze projetos catalogados.</h2>
+    <h2 class="cs-main-title">Em foco. Um caso desenvolvido + doze projetos catalogados.</h2>
   </div>
 
   <div class="cs-band">
@@ -1397,12 +1398,26 @@ const MUNICIPIOS = [
   // Herkenhoff & Prates — 2019
   { id: 'varzea-grande',    lat: -15.65, lng: -56.13, nome: 'Várzea Grande',         uf: 'MT', org: 'Herkenhoff & Prates',   periodo: '2019',      proj: 'Projeto Melhoria da Educação – Fundação Itaú Social' },
   { id: 'itapevi',          lat: -23.55, lng: -46.93, nome: 'Itapevi',               uf: 'SP', org: 'Herkenhoff & Prates',   periodo: '2019',      proj: 'Projeto Melhoria da Educação – Fundação Itaú Social' },
+  // Prefeitura de Belo Horizonte (2026)
+  { id: 'bh-pbh',        lat: -19.915, lng: -43.935, nome: 'Belo Horizonte',      uf: 'MG', org: 'Prefeitura de Belo Horizonte', periodo: '2026–', proj: 'PMO do Gabinete do Prefeito' },
   // Sophos Governança — 2025–2026
   { id: 'sete-lagoas',      lat: -19.47, lng: -44.24, nome: 'Sete Lagoas',           uf: 'MG', org: 'Sophos Governança',     periodo: '2025–2026', proj: 'PCCVS SAAE · Diagnóstico de Custos – Saúde' },
   { id: 'brumadinho',       lat: -20.14, lng: -44.20, nome: 'Brumadinho',            uf: 'MG', org: 'Sophos Governança',     periodo: '2025–2026', proj: 'Plano Estratégico Municipal 2025–2028' },
 ];
 
 const EXPERIENCIA = [
+  {
+    cargo: 'Assessor de Projetos',
+    org: 'Prefeitura de Belo Horizonte, Gabinete do Prefeito',
+    date: 'Jun/2026 — atual', short: 'Atual',
+    desc: 'Monitoramento da carteira de projetos do Governo Municipal no Gabinete do Prefeito: 13 Projetos Transformadores, projetos estratégicos das secretarias e obras de infraestrutura, em visão unificada para o Prefeito.',
+    projects: [
+      'Reuniões semanais de ponto de controle dos Projetos Transformadores com as secretarias, com sistematização das demandas do Prefeito e encaminhamentos às pastas',
+      'Sistema de monitoramento executivo da PBH, solução única de acompanhamento (transformadores, estratégicos e obras): 167 projetos e mais de 1.000 atividades, rastreabilidade de alterações com justificativas e aprovação prévia à informação ao Prefeito',
+      'Painel de obras prioritárias: consolidação da carteira de obras do Prefeito com dados de SMOBI, SUDECAP e URBEL',
+      'Monitor do Diário Oficial de BH: triagem diária automatizada de atos do DOM com IA, com resumo executivo ao Gabinete',
+    ],
+  },
   {
     cargo: 'Professor Orientador',
     org: 'MBA USP/Esalq — Gestão de Projetos',
@@ -1474,6 +1489,7 @@ const CAT_CORES = {
 };
 
 const PROJETOS = [
+  { titulo: 'PMO PBH: Sistema de Monitoramento Executivo', cliente: 'Prefeitura de Belo Horizonte, Gabinete do Prefeito', tipo: 'Governança de projetos', ano: 2026, cat: 'Planejamento & Gestão', resumo: 'Coordenação, do desenho à operação, do sistema unificado de monitoramento da carteira de projetos da PBH, a solução única demandada pelo Gabinete para acompanhar, numa visão só, os 13 Projetos Transformadores, os projetos estratégicos das secretarias e as obras de infraestrutura: 167 projetos e mais de 1.000 atividades de 28 órgãos. Toda alteração é registrada com justificativa em trilha de auditoria, com fluxo de aprovação antes de chegar ao Prefeito; relatórios analíticos apoiam decisões, como o do programa Nossa Vila e o de Vencimentos do Mês. A repactuação auditável reclassificou os atrasos da carteira de 96 para 25 projetos. Desde setembro de 2026 o sistema é a fonte oficial do acompanhamento no Gabinete, com as planilhas descontinuadas, e em outubro de 2026 foi entregue à Prodabel o pacote de avaliação para produção na infraestrutura oficial da PBH.' },
   { titulo: 'Diagnóstico de Custos — Saúde de Sete Lagoas',    cliente: 'Prefeitura de Sete Lagoas',  tipo: 'Finanças públicas',           ano: 2026, cat: 'Finanças Públicas',      resumo: 'Diagnóstico dos custos da Secretaria Municipal de Saúde de Sete Lagoas, com análise integrada de folha de pessoal, contratos, orçamento e dados assistenciais. O trabalho identificou oportunidades de eficiência do gasto e resultou em um plano de ações de curto prazo entregue à gestão municipal.' },
   { titulo: 'Adequação Jurídica do PCCVS — SAAE',              cliente: 'SAAE Sete Lagoas',           tipo: 'Gestão de pessoal',           ano: 2025, cat: 'Gestão de Pessoal',      resumo: 'Revisão técnica e jurídica da minuta do Plano de Cargos, Carreiras, Vencimentos e Salários do Serviço Autônomo de Água e Esgoto de Sete Lagoas, em resposta a uma Ação Civil Pública do Ministério Público de MG. A análise triangulou a minuta original com jurisprudência do TJMG e benchmarks legislativos locais, corrigindo 10 pontos críticos e criando um novo nível remuneratório intermediário. O resultado foi uma minuta consolidada e juridicamente sólida, pronta para tramitação legislativa.' },
   { titulo: 'Assessoramento ao PPAG — Cinco ciclos',           cliente: 'SEPLAG-MG',                  tipo: 'Planejamento governamental',  ano: 2024, cat: 'Planejamento & Gestão',  resumo: 'Coordenação técnica de cinco ciclos anuais (2020–2024) do Plano Plurianual de Ação Governamental (PPAG) de Minas Gerais, instrumento que define os programas e metas do governo estadual em horizontes quadrienais. O assessoramento incluiu surveys com gestores, oficinas de monitoramento e análise de desempenho de mais de 100 programas por ciclo, dando suporte direto às decisões de planejamento da SEPLAG-MG.' },
@@ -1502,6 +1518,7 @@ const ORG_CORES = {
   'Fundação João Pinheiro':'#2d5a3d',
   'Herkenhoff & Prates':   '#c47a2a',
   'Sophos Governança':     '#3d6b8f',
+  'Prefeitura de Belo Horizonte': '#2e6e6a',
 };
 
 function buildMapa() {

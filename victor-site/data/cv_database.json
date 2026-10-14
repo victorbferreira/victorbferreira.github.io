@@ -32,6 +32,19 @@
   ],
   "experiencia_profissional": [
     {
+      "cargo": "Assessor de Projetos",
+      "cargo_anterior": null,
+      "organizacao": "Prefeitura de Belo Horizonte, Gabinete do Prefeito",
+      "inicio": "Jun/2026",
+      "fim": "Atual",
+      "tipo": "CLT/Servidor",
+      "descricao_curta": "Monitoramento da carteira de projetos do Governo Municipal no Gabinete do Prefeito: 13 Projetos Transformadores, projetos estratégicos das secretarias e obras de infraestrutura, em visão unificada para o Prefeito.",
+      "descricao_longa": "Assessor de Projetos do Gabinete do Prefeito da Prefeitura de Belo Horizonte. Condução do monitoramento da carteira de projetos do Governo Municipal: reuniões semanais de ponto de controle dos 13 Projetos Transformadores com as secretarias, sistematização das demandas do Prefeito e encaminhamentos às pastas, sistema de monitoramento executivo da PBH (solução única de acompanhamento de transformadores, projetos estratégicos e obras, com rastreabilidade de alterações e aprovação prévia à informação ao Prefeito), painel de obras prioritárias com dados de SMOBI, SUDECAP e URBEL, e monitor automatizado do Diário Oficial do Município com triagem por IA. Belo Horizonte, MG.",
+      "projetos_destaque": [
+        "pmo-pbh-monitoramento-executivo"
+      ]
+    },
+    {
       "cargo": "Professor de Pós-Graduação",
       "cargo_anterior": null,
       "organizacao": "MBA USP/Esalq – Autônomo",
@@ -463,6 +476,25 @@
     }
   ],
   "portfolio": [
+    {
+      "id": "pmo-pbh-monitoramento-executivo",
+      "titulo": "PMO PBH: Sistema de Monitoramento Executivo",
+      "cliente": "Prefeitura de Belo Horizonte, Gabinete do Prefeito",
+      "organizacao_executora": "Gabinete do Prefeito, PBH",
+      "ano": 2026,
+      "tipo": "Governança de projetos",
+      "tema": "Gestão municipal",
+      "descricao": "Coordenação, do desenho à operação, do sistema unificado de monitoramento da carteira de projetos da PBH, a solução única demandada pelo Gabinete para acompanhar, numa visão só, os 13 Projetos Transformadores, os projetos estratégicos das secretarias e as obras de infraestrutura: 167 projetos e mais de 1.000 atividades de 28 órgãos. Toda alteração é registrada com justificativa em trilha de auditoria, com fluxo de aprovação antes de chegar ao Prefeito; relatórios analíticos apoiam decisões, como o do programa Nossa Vila e o de Vencimentos do Mês. A repactuação auditável reclassificou os atrasos da carteira de 96 para 25 projetos. Desde setembro de 2026 o sistema é a fonte oficial do acompanhamento no Gabinete, com as planilhas descontinuadas, e em outubro de 2026 foi entregue à Prodabel o pacote de avaliação para produção na infraestrutura oficial da PBH.",
+      "atribuicoes": [
+        "Desenho do instrumento de acompanhamento (planilha, formulário web e sistema) a partir da demanda do Prefeito",
+        "Condução do rollout para as secretarias e autarquias via Ofício Circular GP/CG 001/2026, com pontos focais designados por órgão",
+        "Desenvolvimento do sistema (Vercel, Supabase/PostgreSQL, Google Apps Script) e das automações de rotina",
+        "Operação do ponto de controle semanal dos Projetos Transformadores e sistematização das demandas do Prefeito às secretarias",
+        "Condução da avaliação de migração junto à Prodabel para produção na infraestrutura oficial da PBH"
+      ],
+      "resultado": "Sistema adotado como fonte oficial do acompanhamento do Gabinete (planilhas descontinuadas desde set/2026); repactuação auditável reclassificou atrasos de 96 para 25 projetos; em avaliação pela Prodabel para produção na infraestrutura da PBH.",
+      "destaque": false
+    },
     {
       "id": "cohab-voucher-habitacional",
       "titulo": "Avaliação de Desenho – Programa Voucher Habitacional",
